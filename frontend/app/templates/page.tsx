@@ -65,6 +65,25 @@ const templateSections: TemplateSection[] = [
         code: `export function EmailPasswordLoginSystem() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-violet-500/25 p-6 text-white shadow-2xl shadow-violet-900/20 transition-all duration-300 hover:shadow-violet-800/30 overflow-hidden relative group" style={{ backdropFilter: "blur(20px)", background: "linear-gradient(135deg, rgba(15, 10, 40, 0.92), rgba(10, 8, 30, 0.95))" }}>
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.13),transparent_55%)] pointer-events-none" />
       <h3 className="relative mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
@@ -92,6 +111,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-violet-500/25 p-6 text-white shadow-2xl shadow-violet-900/20 transition-all duration-300 hover:shadow-violet-800/30 overflow-hidden relative group" style={{ backdropFilter: "blur(20px)", background: "linear-gradient(135deg, rgba(15, 10, 40, 0.92), rgba(10, 8, 30, 0.95))" }}>
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.13),transparent_55%)] pointer-events-none" />
             <h3 className="relative mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
@@ -126,6 +164,19 @@ const templateSections: TemplateSection[] = [
         code: `export function JWTAuthBoilerplate() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-[linear-gradient(135deg,rgba(15,12,45,0.95),rgba(10,8,30,0.98))] p-6 text-white shadow-xl shadow-indigo-900/10 transition-all duration-300 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
@@ -150,6 +201,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-[linear-gradient(135deg,rgba(15,12,45,0.95),rgba(10,8,30,0.98))] p-6 text-white shadow-xl shadow-indigo-900/10 transition-all duration-300 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
@@ -181,6 +245,22 @@ const templateSections: TemplateSection[] = [
         code: `export function OAuthLogin() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(15,10,35,0.95),rgba(10,5,25,0.98))] p-6 text-white shadow-2xl relative overflow-hidden group">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1),transparent_55%)] pointer-events-none" />
       <h3 className="relative text-xl font-semibold text-center">Continue with OAuth</h3>
       <p className="relative mt-1 text-sm text-slate-300 text-center">Choose a provider to sign in instantly.</p>
@@ -199,6 +279,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(15,10,35,0.95),rgba(10,5,25,0.98))] p-6 text-white shadow-2xl relative overflow-hidden group">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1),transparent_55%)] pointer-events-none" />
             <h3 className="relative text-xl font-semibold text-center">Continue with OAuth</h3>
             <p className="relative mt-1 text-sm text-slate-300 text-center">Choose a provider to sign in instantly.</p>
@@ -224,6 +320,25 @@ const templateSections: TemplateSection[] = [
         code: `export function PasswordResetFlow() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/20 bg-[linear-gradient(135deg,rgba(5,20,20,0.97),rgba(8,30,25,0.97))] p-6 text-center text-white shadow-2xl shadow-emerald-900/10 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.1),transparent_60%)] pointer-events-none" />
       <p className="relative text-xs uppercase tracking-[0.2em] text-emerald-400">Password reset</p>
       <h3 className="relative mt-2 text-2xl font-semibold">Reset your password</h3>
@@ -238,6 +353,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/20 bg-[linear-gradient(135deg,rgba(5,20,20,0.97),rgba(8,30,25,0.97))] p-6 text-center text-white shadow-2xl shadow-emerald-900/10 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.1),transparent_60%)] pointer-events-none" />
             <p className="relative text-xs uppercase tracking-[0.2em] text-emerald-400">Password reset</p>
             <h3 className="relative mt-2 text-2xl font-semibold">Reset your password</h3>
@@ -259,6 +393,22 @@ const templateSections: TemplateSection[] = [
         code: `export function EmailVerificationSystem() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(12,8,40,0.97),rgba(10,10,35,0.97))] p-6 text-center text-white shadow-2xl shadow-indigo-900/20 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.1),transparent_55%)] pointer-events-none" />
       <p className="relative text-xs uppercase tracking-[0.2em] text-indigo-400">Verify email</p>
       <h3 className="relative mt-2 text-2xl font-semibold">Check your inbox</h3>
@@ -276,6 +426,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(12,8,40,0.97),rgba(10,10,35,0.97))] p-6 text-center text-white shadow-2xl shadow-indigo-900/20 relative overflow-hidden group">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.1),transparent_55%)] pointer-events-none" />
             <p className="relative text-xs uppercase tracking-[0.2em] text-indigo-400">Verify email</p>
             <h3 className="relative mt-2 text-2xl font-semibold">Check your inbox</h3>
@@ -300,6 +466,19 @@ const templateSections: TemplateSection[] = [
         code: `export function MultiFactorAuthenticationOTP() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-purple-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <p className="text-xs uppercase tracking-[0.2em] text-purple-200">Security step</p>
       <h3 className="mt-2 text-2xl font-semibold">Enter your 6-digit code</h3>
       <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
@@ -314,6 +493,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-purple-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <p className="text-xs uppercase tracking-[0.2em] text-purple-200">Security step</p>
             <h3 className="mt-2 text-2xl font-semibold">Enter your 6-digit code</h3>
             <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
@@ -343,6 +535,22 @@ const templateSections: TemplateSection[] = [
         code: `export function StripeSubscriptionIntegration() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Subscriptions</p>
@@ -365,6 +573,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Subscriptions</p>
@@ -394,6 +618,22 @@ const templateSections: TemplateSection[] = [
         code: `export function OneTimePaymentCheckout() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-2xl font-semibold">Complete your purchase</h3>
       <p className="mt-1 text-sm text-slate-300">Pay once and get instant access.</p>
       <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
@@ -419,6 +659,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-2xl font-semibold">Complete your purchase</h3>
             <p className="mt-1 text-sm text-slate-300">Pay once and get instant access.</p>
             <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
@@ -451,6 +707,19 @@ const templateSections: TemplateSection[] = [
         code: `export function PricingPageUI() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Pricing</p>
@@ -480,6 +749,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Pricing</p>
@@ -516,6 +798,22 @@ const templateSections: TemplateSection[] = [
         code: `export function InvoiceGeneratorSystem() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Invoice Generator</h3>
         <button className="btn-secondary" type="button">Create invoice</button>
@@ -539,6 +837,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Invoice Generator</h3>
               <button className="btn-secondary" type="button">Create invoice</button>
@@ -569,6 +883,25 @@ const templateSections: TemplateSection[] = [
         code: `export function BillingHistoryDashboard() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Billing History</h3>
         <span className="text-xs text-slate-400">Last 90 days</span>
@@ -592,6 +925,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Billing History</h3>
               <span className="text-xs text-slate-400">Last 90 days</span>
@@ -622,6 +974,25 @@ const templateSections: TemplateSection[] = [
         code: `export function CouponDiscountSystem() {
   return (
     <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Apply a promo code</h3>
       <p className="mt-1 text-sm text-slate-300">Save on your first month.</p>
       <div className="mt-4 flex gap-3">
@@ -647,6 +1018,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Apply a promo code</h3>
             <p className="mt-1 text-sm text-slate-300">Save on your first month.</p>
             <div className="mt-4 flex gap-3">
@@ -687,6 +1077,22 @@ const templateSections: TemplateSection[] = [
         code: `export function PlanUpgradeDowngradeLogic() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Current plan</p>
@@ -708,6 +1114,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Current plan</p>
@@ -736,6 +1158,22 @@ const templateSections: TemplateSection[] = [
         code: `export function FreeVsPaidFeatureGating() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">Feature access</h3>
       <p className="mt-1 text-sm text-slate-300">Upgrade to unlock premium features.</p>
       <ul className="mt-4 space-y-2 text-sm">
@@ -752,6 +1190,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">Feature access</h3>
             <p className="mt-1 text-sm text-slate-300">Upgrade to unlock premium features.</p>
             <ul className="mt-4 space-y-2 text-sm">
@@ -775,6 +1229,25 @@ const templateSections: TemplateSection[] = [
         code: `export function SubscriptionStatusTracker() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Subscription status</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {[{ label: "Active", color: "bg-emerald-500/15 text-emerald-100" }, { label: "Trialing", color: "bg-amber-500/15 text-amber-100" }, { label: "Past due", color: "bg-rose-500/15 text-rose-100" }].map(item => (
@@ -789,6 +1262,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Subscription status</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               {[{ label: "Active", color: "bg-emerald-500/15 text-emerald-100" }, { label: "Trialing", color: "bg-amber-500/15 text-amber-100" }, { label: "Past due", color: "bg-rose-500/15 text-rose-100" }].map(item => (
@@ -810,6 +1302,22 @@ const templateSections: TemplateSection[] = [
         code: `export function TrialPeriodSystem() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Trial</p>
@@ -826,6 +1334,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Trial</p>
@@ -849,6 +1373,19 @@ const templateSections: TemplateSection[] = [
         code: `export function UsageBasedBillingSystem() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <h3 className="text-xl font-semibold">Usage this month</h3>
       <p className="mt-1 text-sm text-slate-300">API calls billed by consumption.</p>
       <div className="mt-4 space-y-3">
@@ -869,6 +1406,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <h3 className="text-xl font-semibold">Usage this month</h3>
             <p className="mt-1 text-sm text-slate-300">API calls billed by consumption.</p>
             <div className="mt-4 space-y-3">
@@ -904,6 +1454,22 @@ const templateSections: TemplateSection[] = [
         code: `export function AdminDashboardUI() {
   return (
     <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Admin Dashboard</h3>
         <button className="btn-secondary" type="button">Export report</button>
@@ -932,6 +1498,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Admin Dashboard</h3>
               <button className="btn-secondary" type="button">Export report</button>
@@ -967,6 +1549,22 @@ const templateSections: TemplateSection[] = [
         code: `export function UserDashboardLayout() {
   return (
     <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-xl font-semibold">Welcome back, Jamie</h3>
@@ -987,6 +1585,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-xl font-semibold">Welcome back, Jamie</h3>
@@ -1014,6 +1628,19 @@ const templateSections: TemplateSection[] = [
         code: `export function AnalyticsDashboardCharts() {
   return (
     <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <h3 className="text-xl font-semibold">Analytics Dashboard</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {["Signups", "Activation", "Retention"].map(metric => (
@@ -1032,6 +1659,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <h3 className="text-xl font-semibold">Analytics Dashboard</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               {["Signups", "Activation", "Retention"].map(metric => (
@@ -1057,6 +1697,22 @@ const templateSections: TemplateSection[] = [
         code: `export function SaaSMetricsUI() {
   return (
     <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">SaaS Metrics</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-4">
         {[{ label: "MRR", value: "$58.3k" }, { label: "Active users", value: "18,402" }, { label: "Churn", value: "1.9%" }, { label: "ARPA", value: "$32" }].map(stat => (
@@ -1071,6 +1727,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">SaaS Metrics</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-4">
               {[{ label: "MRR", value: "$58.3k" }, { label: "Active users", value: "18,402" }, { label: "Churn", value: "1.9%" }, { label: "ARPA", value: "$32" }].map(stat => (
@@ -1092,6 +1764,25 @@ const templateSections: TemplateSection[] = [
         code: `export function SidebarNavbarLayout() {
   return (
     <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="flex gap-4">
         <aside className="hidden w-40 flex-col gap-2 rounded-xl border border-slate-800 bg-slate-900 p-4 md:flex">
           {["Overview", "Templates", "Billing", "Settings"].map(item => (
@@ -1118,6 +1809,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="flex gap-4">
               <aside className="hidden w-40 flex-col gap-2 rounded-xl border border-slate-800 bg-slate-900 p-4 md:flex">
                 {["Overview", "Templates", "Billing", "Settings"].map(item => (
@@ -1159,6 +1869,22 @@ const templateSections: TemplateSection[] = [
         code: `export function UserProfileSystem() {
   return (
     <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center gap-4">
         <div className="h-14 w-14 rounded-full bg-gradient-to-br from-rose-400 to-pink-500" />
         <div>
@@ -1182,6 +1908,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center gap-4">
               <div className="h-14 w-14 rounded-full bg-gradient-to-br from-rose-400 to-pink-500" />
               <div>
@@ -1212,6 +1954,22 @@ const templateSections: TemplateSection[] = [
         code: `export function RoleBasedAccessControl() {
   return (
     <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Role-based access</h3>
         <button className="btn-secondary" type="button">Add role</button>
@@ -1244,6 +2002,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Role-based access</h3>
               <button className="btn-secondary" type="button">Add role</button>
@@ -1283,6 +2057,25 @@ const templateSections: TemplateSection[] = [
         code: `export function UserPermissionsSystem() {
   return (
     <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Permissions</h3>
       <p className="mt-1 text-sm text-slate-300">Enable or revoke feature access.</p>
       <div className="mt-4 space-y-3 text-sm">
@@ -1302,6 +2095,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Permissions</h3>
             <p className="mt-1 text-sm text-slate-300">Enable or revoke feature access.</p>
             <div className="mt-4 space-y-3 text-sm">
@@ -1328,6 +2140,22 @@ const templateSections: TemplateSection[] = [
         code: `export function AccountSettingsPage() {
   return (
     <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Account settings</h3>
       <div className="mt-4 grid gap-3">
         <label className="text-sm text-slate-200">
@@ -1355,6 +2183,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Account settings</h3>
             <div className="mt-4 grid gap-3">
               <label className="text-sm text-slate-200">
@@ -1389,6 +2233,19 @@ const templateSections: TemplateSection[] = [
         code: `export function DeleteAccountFlow() {
   return (
     <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <h3 className="text-xl font-semibold">Delete account</h3>
       <p className="mt-1 text-sm text-slate-300">This action is permanent and cannot be undone.</p>
       <div className="mt-4 rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm">
@@ -1410,6 +2267,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <h3 className="text-xl font-semibold">Delete account</h3>
             <p className="mt-1 text-sm text-slate-300">This action is permanent and cannot be undone.</p>
             <div className="mt-4 rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm">
@@ -1446,6 +2316,22 @@ const templateSections: TemplateSection[] = [
         code: `export function WelcomeEmailSystem() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Welcome</p>
       <h3 className="mt-2 text-2xl font-semibold">You are in! Let us get you started.</h3>
       <p className="mt-1 text-sm text-slate-300">Pick a template and launch in minutes.</p>
@@ -1467,6 +2353,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Welcome</p>
             <h3 className="mt-2 text-2xl font-semibold">You are in! Let us get you started.</h3>
             <p className="mt-1 text-sm text-slate-300">Pick a template and launch in minutes.</p>
@@ -1495,6 +2397,22 @@ const templateSections: TemplateSection[] = [
         code: `export function PasswordResetEmailTemplate() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-2xl font-semibold">Reset your password</h3>
       <p className="mt-1 text-sm text-slate-300">We received a request to reset your password.</p>
       <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
@@ -1507,6 +2425,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-2xl font-semibold">Reset your password</h3>
             <p className="mt-1 text-sm text-slate-300">We received a request to reset your password.</p>
             <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
@@ -1526,6 +2460,19 @@ const templateSections: TemplateSection[] = [
         code: `export function InAppNotificationSystem() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Notifications</h3>
         <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">3 new</span>
@@ -1547,6 +2494,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Notifications</h3>
               <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">3 new</span>
@@ -1575,6 +2535,22 @@ const templateSections: TemplateSection[] = [
         code: `export function HTMLEmailTemplates() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">HTML Email Builder</h3>
       <div className="mt-4 space-y-3">
         <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -1595,6 +2571,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">HTML Email Builder</h3>
             <div className="mt-4 space-y-3">
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -1622,6 +2614,25 @@ const templateSections: TemplateSection[] = [
         code: `export function SMTPEmailIntegration() {
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">SMTP Integration</h3>
         <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
@@ -1642,6 +2653,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">SMTP Integration</h3>
               <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
@@ -1677,6 +2707,22 @@ const templateSections: TemplateSection[] = [
         code: `export function FileUploadSystem() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Upload files</h3>
       <div className="mt-4 rounded-xl border border-dashed border-emerald-500/40 bg-emerald-500/5 p-6 text-center text-sm text-emerald-100">
         Drag files here or click to upload
@@ -1694,6 +2740,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Upload files</h3>
             <div className="mt-4 rounded-xl border border-dashed border-emerald-500/40 bg-emerald-500/5 p-6 text-center text-sm text-emerald-100">
               Drag files here or click to upload
@@ -1718,6 +2780,22 @@ const templateSections: TemplateSection[] = [
         code: `export function ImageUploadWithPreview() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">Image preview</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         <div className="aspect-square rounded-xl border border-slate-800 bg-slate-900" />
@@ -1732,6 +2810,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">Image preview</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="aspect-square rounded-xl border border-slate-800 bg-slate-900" />
@@ -1753,6 +2847,25 @@ const templateSections: TemplateSection[] = [
         code: `export function CloudStorageIntegration() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">AWS S3 Storage</h3>
         <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
@@ -1770,6 +2883,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">AWS S3 Storage</h3>
               <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
@@ -1794,6 +2926,22 @@ const templateSections: TemplateSection[] = [
         code: `export function ProfilePictureUpload() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Profile photo</h3>
       <div className="mt-4 flex items-center gap-4">
         <div className="h-16 w-16 rounded-full bg-slate-800" />
@@ -1807,6 +2955,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Profile photo</h3>
             <div className="mt-4 flex items-center gap-4">
               <div className="h-16 w-16 rounded-full bg-slate-800" />
@@ -1827,6 +2991,19 @@ const templateSections: TemplateSection[] = [
         code: `export function DocumentManagementSystem() {
   return (
     <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Documents</h3>
         <button className="btn-secondary" type="button">New folder</button>
@@ -1848,6 +3025,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Documents</h3>
               <button className="btn-secondary" type="button">New folder</button>
@@ -1884,6 +3074,22 @@ const templateSections: TemplateSection[] = [
         code: `export function UserActivityTracking() {
   return (
     <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">User activity</h3>
       <div className="mt-4 space-y-3 text-sm">
         {[
@@ -1902,6 +3108,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">User activity</h3>
             <div className="mt-4 space-y-3 text-sm">
               {[
@@ -1927,6 +3149,22 @@ const templateSections: TemplateSection[] = [
         code: `export function PageViewAnalytics() {
   return (
     <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Page views</h3>
         <span className="text-xs text-slate-400">Last 7 days</span>
@@ -1941,6 +3179,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Page views</h3>
               <span className="text-xs text-slate-400">Last 7 days</span>
@@ -1962,6 +3216,19 @@ const templateSections: TemplateSection[] = [
         code: `export function AdminAnalyticsDashboard() {
   return (
     <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Admin analytics</h3>
         <button className="btn-secondary" type="button">Export</button>
@@ -1979,6 +3246,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Admin analytics</h3>
               <button className="btn-secondary" type="button">Export</button>
@@ -2003,6 +3283,22 @@ const templateSections: TemplateSection[] = [
         code: `export function EventTrackingSystem() {
   return (
     <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">Event tracking</h3>
       <div className="mt-4 space-y-2 text-sm">
         {[
@@ -2021,6 +3317,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">Event tracking</h3>
             <div className="mt-4 space-y-2 text-sm">
               {[
@@ -2046,6 +3358,25 @@ const templateSections: TemplateSection[] = [
         code: `export function CustomChartIntegration() {
   return (
     <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Custom charts</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -2062,6 +3393,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Custom charts</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -2093,6 +3443,22 @@ const templateSections: TemplateSection[] = [
         code: `export function AdminDashboardPanel() {
   return (
     <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Admin overview</h3>
         <button className="btn-secondary" type="button">Generate report</button>
@@ -2110,6 +3476,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Admin overview</h3>
               <button className="btn-secondary" type="button">Generate report</button>
@@ -2134,6 +3516,22 @@ const templateSections: TemplateSection[] = [
         code: `export function UserManagementAdminView() {
   return (
     <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">User management</h3>
         <button className="btn-secondary" type="button">Invite user</button>
@@ -2155,6 +3553,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">User management</h3>
               <button className="btn-secondary" type="button">Invite user</button>
@@ -2183,6 +3597,25 @@ const templateSections: TemplateSection[] = [
         code: `export function ContentModerationSystem() {
   return (
     <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Moderation queue</h3>
       <div className="mt-4 space-y-2 text-sm">
         {[
@@ -2201,6 +3634,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Moderation queue</h3>
             <div className="mt-4 space-y-2 text-sm">
               {[
@@ -2226,6 +3678,22 @@ const templateSections: TemplateSection[] = [
         code: `export function AnalyticsOverviewPanel() {
   return (
     <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-xl font-semibold">Analytics overview</h3>
       <div className="mt-4 grid gap-3 md:grid-cols-2">
         <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -2242,6 +3710,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-xl font-semibold">Analytics overview</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -2265,6 +3749,19 @@ const templateSections: TemplateSection[] = [
         code: `export function SystemSettingsPanel() {
   return (
     <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <h3 className="text-xl font-semibold">System settings</h3>
       <div className="mt-4 space-y-3 text-sm">
         {[
@@ -2283,6 +3780,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <h3 className="text-xl font-semibold">System settings</h3>
             <div className="mt-4 space-y-3 text-sm">
               {[
@@ -2316,6 +3826,22 @@ const templateSections: TemplateSection[] = [
         code: `export function AIChatInterface() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <h3 className="text-xl font-semibold">AI Assistant</h3>
       <div className="mt-4 space-y-3 text-sm">
         <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">How can I help you today?</div>
@@ -2330,6 +3856,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <h3 className="text-xl font-semibold">AI Assistant</h3>
             <div className="mt-4 space-y-3 text-sm">
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">How can I help you today?</div>
@@ -2351,6 +3893,22 @@ const templateSections: TemplateSection[] = [
         code: `export function OpenAIAPIIntegrationModule() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
       <h3 className="text-xl font-semibold">OpenAI Integration</h3>
       <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-xs">
         <p className="text-slate-400">POST /v1/chat/completions</p>
@@ -2362,6 +3920,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Cyber Forest */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Abstract Branch / Leaves Silhouette */}
+        <div className="absolute -top-10 -right-10 w-64 h-64 opacity-10 text-emerald-800 animate-shape-morph" style={{ animationDuration: '20s' }}>
+          <svg viewBox="0 0 200 200" className="w-full h-full fill-currentColor">
+             <path d="M45.7,113.8c-20.9-10.8-37.5-31-41.2-54.6C12,6,43.3-8.8,63,6.2c22.1,16.8,17.2,50,4,71.5 C59.6,98.8,53.2,109.2,45.7,113.8z M80.9,139.8c-7.2-22.3-1.8-49,14.8-65.7c18.5-18.7,48.5-14.7,59.2,8.5 c10.5,22.7,3.3,51.8-15.5,67.6C121.7,165.2,95.5,166.4,80.9,139.8z M25.8,168.1c9.3-19.1,30.8-30.8,51.6-27.4 c21.4,3.5,37.3,23.3,34.7,45c-2.4,19.9-19.3,34.8-38.6,33.5C53.7,217.7,31.4,197.6,25.8,168.1z"/>
+          </svg>
+        </div>
+        {/* Soft emerald gradient glow */}
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-gradient-to-t from-emerald-900/10 to-transparent blur-xl" />
+        {/* Fireflies (Particles) */}
+        <div className="absolute top-3/4 left-1/4 w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '14s', animationDelay: '1s' }} />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.8)] animate-particle-drift" style={{ animationDuration: '19s', animationDelay: '4s' }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-green-400 blur-[1px] animate-particle-drift" style={{ animationDuration: '24s', animationDelay: '7s' }} />
+        <div className="absolute bottom-10 right-10 w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_5px_rgba(52,211,153,0.8)] animate-particle-drift" style={{ animationDuration: '16s', animationDelay: '2s' }} />
+      </div>
             <h3 className="text-xl font-semibold">OpenAI Integration</h3>
             <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-xs">
               <p className="text-slate-400">POST /v1/chat/completions</p>
@@ -2380,6 +3954,19 @@ const templateSections: TemplateSection[] = [
         code: `export function AIContentGeneratorUI() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
       <h3 className="text-xl font-semibold">Content generator</h3>
       <textarea className="mt-4 w-full rounded-lg border border-slate-800 bg-slate-900 p-3 text-sm" rows={3} placeholder="Write a welcome email for a SaaS app..." />
       <button className="btn-primary mt-3" type="button">Generate</button>
@@ -2389,6 +3976,19 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Atmospheric Sky */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Sunset ambient gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/5 to-fuchsia-900/10 mix-blend-screen" />
+        
+        {/* Slow drifting abstract cloud/wind blobs */}
+        <div className="absolute -top-10 -left-20 w-80 h-32 bg-fuchsia-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '25s' }} />
+        <div className="absolute top-1/3 -right-20 w-96 h-40 bg-indigo-800/10 blur-3xl rounded-[100%] animate-wave-flow" style={{ animationDuration: '35s', animationDirection: 'reverse' }} />
+        
+        {/* Subtle Wind Lines (Atmosphere) */}
+        <div className="absolute top-1/4 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-fuchsia-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '18s' }} />
+        <div className="absolute bottom-1/3 left-0 w-[150%] h-px bg-gradient-to-r from-transparent via-indigo-400/10 to-transparent animate-wave-flow" style={{ animationDuration: '22s', animationDirection: 'reverse' }} />
+      </div>
             <h3 className="text-xl font-semibold">Content generator</h3>
             <textarea className="mt-4 w-full rounded-lg border border-slate-800 bg-slate-900 p-3 text-sm" rows={3} placeholder="Write a welcome email for a SaaS app..." />
             <button className="btn-primary mt-3" type="button">Generate</button>
@@ -2405,6 +4005,22 @@ const templateSections: TemplateSection[] = [
         code: `export function PromptManagementSystem() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">Prompt library</h3>
         <button className="btn-secondary" type="button">New prompt</button>
@@ -2426,6 +4042,22 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Night Node */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Subtle tech grid referencing a starry night coordinate system */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        {/* Dark nebula background blob */}
+        <div className="absolute -inset-10 bg-slate-800/10 blur-[80px] rounded-full animate-shape-morph" style={{ animationDuration: '30s' }} />
+        
+        {/* Glowing Star/Neon Particles */}
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 rounded-full bg-cyan-300 shadow-[0_0_10px_2px_rgba(34,211,238,0.6)] animate-particle-drift" style={{ animationDuration: '20s', animationDelay: '0s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 rounded-full bg-blue-300 shadow-[0_0_10px_2px_rgba(147,197,253,0.6)] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+        <div className="absolute top-2/3 left-2/3 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_12px_2px_rgba(192,132,252,0.6)] animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '10s' }} />
+        
+        {/* Pulsing neon corner accent referencing a moon/satellite */}
+        <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full border border-cyan-500/20 animate-neon-pulse" />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Prompt library</h3>
               <button className="btn-secondary" type="button">New prompt</button>
@@ -2454,6 +4086,25 @@ const templateSections: TemplateSection[] = [
         code: `export function AIDashboardInterface() {
   return (
     <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">AI usage</h3>
         <span className="rounded-full bg-indigo-500/15 px-3 py-1 text-xs text-indigo-100">March</span>
@@ -2471,6 +4122,25 @@ const templateSections: TemplateSection[] = [
 }`,
         preview: (
           <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      {/* Elegant Nature Layer: Ocean Flow */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-2xl">
+        {/* Flowing bottom wave */}
+        <div className="absolute -bottom-20 left-0 w-[200%] h-64 opacity-20 text-cyan-800 animate-wave-flow" style={{ animationDuration: '15s' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.66,195.49,103.88Z" />
+          </svg>
+        </div>
+        <div className="absolute -bottom-16 left-0 w-[200%] h-64 opacity-10 text-blue-900 animate-wave-flow" style={{ animationDuration: '20s', animationDirection: 'reverse' }}>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full fill-currentColor">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fillOpacity=".25"/>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fillOpacity=".5"/>
+          </svg>
+        </div>
+        {/* Subtle Water Dust (Particles) */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-cyan-400 animate-particle-drift" style={{ animationDuration: '18s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 rounded-full bg-blue-300 animate-particle-drift" style={{ animationDuration: '22s', animationDelay: '0s' }} />
+        <div className="absolute top-2/3 right-1/4 w-3 h-3 rounded-full bg-cyan-500 blur-[1px] animate-particle-drift" style={{ animationDuration: '25s', animationDelay: '5s' }} />
+      </div>
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">AI usage</h3>
               <span className="rounded-full bg-indigo-500/15 px-3 py-1 text-xs text-indigo-100">March</span>
