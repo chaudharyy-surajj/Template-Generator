@@ -3,14 +3,25 @@
 import { ReactNode, useMemo, useState } from "react";
 import { Check, Copy, Layers, Sparkles, LayoutTemplate, MousePointer2, PlayCircle } from "lucide-react";
 
+type CodeTab = "html" | "css" | "react";
+
+interface TemplateCode {
+  html: string;
+  css: string;
+  react: string;
+}
+
+type TemplatePreview = (() => ReactNode) | ReactNode;
+
 interface TemplateExample {
   id: string;
   name: string;
+  description?: string;
   summary: string;
   language: string;
   tags: string[];
-  code: string;
-  preview: ReactNode;
+  code: TemplateCode | string;
+  preview: TemplatePreview;
 }
 
 interface TemplateSection {
@@ -19,6 +30,16 @@ interface TemplateSection {
   accent: string;
   description: string;
   templates: TemplateExample[];
+}
+
+interface NormalizedTemplateExample extends Omit<TemplateExample, "code" | "preview" | "description"> {
+  description: string;
+  code: TemplateCode;
+  preview: () => ReactNode;
+}
+
+interface NormalizedTemplateSection extends Omit<TemplateSection, "templates"> {
+  templates: NormalizedTemplateExample[];
 }
 
 const createPreview = (title: string, subtitle: string, _badge?: string, _gradient?: string) => (
@@ -2459,13 +2480,66 @@ const templateSections: TemplateSection[] = [
   }
 ];
 
+const defaultTemplateCss = `@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This template uses utility classes included in the HTML snippet. */`;
+
+const extractMarkupFromReactCode = (reactCode: string) => {
+  const returnMatch = reactCode.match(/return\s*\(([\s\S]*?)\);\s*}/m);
+  return (returnMatch?.[1] ?? reactCode).trim();
+};
+
+const toHtmlCode = (reactCode: string) => {
+  return extractMarkupFromReactCode(reactCode)
+    .replace(/className=/g, "class=")
+    .replace(/\{\s*\/\*[\s\S]*?\*\/\s*\}/g, "")
+    .replace(/\{`([^`]+)`\}/g, "$1")
+    .replace(/\{"([^"]+)"\}/g, "$1")
+    .replace(/\{'([^']+)'\}/g, "$1")
+    .replace(/\{\s*true\s*\}/g, "true")
+    .replace(/\{\s*false\s*\}/g, "false");
+};
+
+const toCodeBundle = (template: TemplateExample): TemplateCode => {
+  if (typeof template.code !== "string") {
+    return template.code;
+  }
+
+  return {
+    html: toHtmlCode(template.code),
+    css: defaultTemplateCss,
+    react: template.code
+  };
+};
+
+const toPreviewComponent = (preview: TemplatePreview) => {
+  if (typeof preview === "function") {
+    return preview as () => ReactNode;
+  }
+
+  return () => <>{preview}</>;
+};
+
+const normalizedTemplateSections: NormalizedTemplateSection[] = templateSections.map(section => ({
+  ...section,
+  templates: section.templates.map(template => ({
+    ...template,
+    description: template.description ?? template.summary,
+    code: toCodeBundle(template),
+    preview: toPreviewComponent(template.preview)
+  }))
+}));
+
 export default function TemplatesPage() {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
   const [hoveredTemplateId, setHoveredTemplateId] = useState<string | null>(null);
   const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<CodeTab>("react");
 
-  const activeSection = useMemo(() => templateSections.find(section => section.id === activeSectionId) ?? null, [activeSectionId]);
+  const activeSection = useMemo(() => normalizedTemplateSections.find(section => section.id === activeSectionId) ?? null, [activeSectionId]);
 
   const hoveredTemplate = useMemo(
     () => activeSection?.templates.find(t => t.id === hoveredTemplateId) ?? null,
@@ -2477,7 +2551,7 @@ export default function TemplatesPage() {
   );
   const previewTemplate = hoveredTemplate ?? selectedTemplate ?? null;
 
-  const renderPreview = (template?: TemplateExample | null) => {
+  const renderPreview = (template?: NormalizedTemplateExample | null) => {
     if (!template) return null;
     switch (template.id) {
       case "aurora-hero":
@@ -3237,7 +3311,10 @@ Next update in 20 minutes. Thank you for your patience.`;
           </div>
         );
       default:
-        return template.preview ?? null;
+        {
+          const Preview = template.preview;
+          return <Preview />;
+        }
     }
   };
 
@@ -3245,6 +3322,7 @@ Next update in 20 minutes. Thank you for your patience.`;
     setActiveSectionId(sectionId);
     setSelectedTemplateId(null);
     setHoveredTemplateId(null);
+    setActiveTab("react");
   };
 
   const handleBackToTopics = () => {
@@ -3252,13 +3330,26 @@ Next update in 20 minutes. Thank you for your patience.`;
     setSelectedTemplateId(null);
     setHoveredTemplateId(null);
     setCopiedId(null);
+    setActiveTab("react");
   };
 
   const copyCode = async () => {
     if (!selectedTemplate) return;
-    await navigator.clipboard.writeText(selectedTemplate.code);
+    await navigator.clipboard.writeText(selectedTemplate.code[activeTab]);
     setCopiedId(selectedTemplate.id);
     setTimeout(() => setCopiedId(null), 1200);
+  };
+
+  const codeExtensionByTab: Record<CodeTab, string> = {
+    react: "tsx",
+    html: "html",
+    css: "css"
+  };
+
+  const codeLabelByTab: Record<CodeTab, string> = {
+    react: "React (TSX)",
+    html: "HTML",
+    css: "CSS"
   };
 
   return (
@@ -3287,7 +3378,7 @@ Next update in 20 minutes. Thank you for your patience.`;
               <Layers className="h-4 w-4" /> Topics
             </div>
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-              {templateSections.map(section => (
+              {normalizedTemplateSections.map(section => (
                 <button
                   key={section.id}
                   onClick={() => handleSectionSelect(section.id)}
@@ -3330,7 +3421,10 @@ Next update in 20 minutes. Thank you for your patience.`;
                       <button
                         key={template.id}
                         onMouseEnter={() => setHoveredTemplateId(template.id)}
-                        onClick={() => setSelectedTemplateId(template.id)}
+                        onClick={() => {
+                          setSelectedTemplateId(template.id);
+                          setActiveTab("react");
+                        }}
                         className={`group w-full rounded-xl border px-4 py-3 text-left transition-all duration-200 hover:border-white/50 hover:bg-white/5 ${
                           active ? "border-white/70 bg-white/5 shadow-lg shadow-black/20" : "border-slate-800 bg-slate-950"
                         }`}
@@ -3405,11 +3499,27 @@ Next update in 20 minutes. Thank you for your patience.`;
                   {selectedTemplate ? (
                     <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900">
                       <div className="flex items-center justify-between border-b border-slate-800 px-3 py-2 text-xs text-slate-300">
-                        <span>{selectedTemplate.name}.tsx</span>
-                        <span>Tailwind + TSX</span>
+                        <span>{selectedTemplate.name}.{codeExtensionByTab[activeTab]}</span>
+                        <div className="flex items-center gap-2">
+                          {(["html", "css", "react"] as CodeTab[]).map(tab => (
+                            <button
+                              key={tab}
+                              type="button"
+                              onClick={() => setActiveTab(tab)}
+                              className={`rounded-full border px-2 py-0.5 uppercase tracking-wide transition ${
+                                activeTab === tab
+                                  ? "border-white/50 bg-white/10 text-white"
+                                  : "border-slate-700 bg-slate-900 text-slate-300 hover:border-white/30"
+                              }`}
+                            >
+                              {tab}
+                            </button>
+                          ))}
+                          <span>{codeLabelByTab[activeTab]}</span>
+                        </div>
                       </div>
                       <pre className="max-h-[320px] overflow-auto px-4 py-3 text-[13px] leading-relaxed text-slate-100 font-mono whitespace-pre">
-                        <code>{selectedTemplate.code}</code>
+                        <code>{selectedTemplate.code[activeTab]}</code>
                       </pre>
                     </div>
                   ) : (
