@@ -30,3 +30,23 @@ a {
 .card {
   @apply rounded-xl border border-slate-800 bg-slate-900/60 p-4 shadow-sm;
 }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+  50% { box-shadow: 0 0 14px 3px rgba(139, 92, 246, 0.35); }
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-shake { animation: shake 0.4s ease; }
+.animate-glow-pulse { animation: glow-pulse 2.4s ease-in-out infinite; }
+.animate-float-up { animation: float-up 0.5s ease forwards; }

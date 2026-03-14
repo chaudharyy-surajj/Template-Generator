@@ -64,18 +64,19 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Login"],
         code: `export function EmailPasswordLoginSystem() {
   return (
-    <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+    <div className="mx-auto max-w-md rounded-2xl border border-violet-500/25 p-6 text-white shadow-2xl shadow-violet-900/20 transition-all duration-300 hover:shadow-violet-800/30 overflow-hidden relative group" style={{ backdropFilter: "blur(20px)", background: "linear-gradient(135deg, rgba(15, 10, 40, 0.92), rgba(10, 8, 30, 0.95))" }}>
       <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
-      <h3 className="mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.13),transparent_55%)] pointer-events-none" />
+      <h3 className="relative mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
       <p className="mt-1 text-sm text-slate-300">Use your email and password to continue.</p>
       <form className="mt-5 space-y-3">
         <label className="block text-sm text-slate-200">
           Email
-          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="you@company.com" type="email" />
+          <input className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition-all duration-200 focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/20" placeholder="you@company.com" type="email" />
         </label>
         <label className="block text-sm text-slate-200">
           Password
-          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="••••••••" type="password" />
+          <input className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition-all duration-200 focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/20" placeholder="••••••••" type="password" />
         </label>
         <div className="flex items-center justify-between text-xs text-slate-400">
           <label className="flex items-center gap-2">
@@ -84,24 +85,25 @@ const templateSections: TemplateSection[] = [
           </label>
           <button className="text-emerald-200" type="button">Forgot password?</button>
         </div>
-        <button className="btn-primary w-full" type="button">Sign in</button>
+        <button className="mt-4 w-full rounded-xl py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600" type="button">Sign in</button>
       </form>
     </div>
   );
 }`,
         preview: (
-          <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+          <div className="mx-auto max-w-md rounded-2xl border border-violet-500/25 p-6 text-white shadow-2xl shadow-violet-900/20 transition-all duration-300 hover:shadow-violet-800/30 overflow-hidden relative group" style={{ backdropFilter: "blur(20px)", background: "linear-gradient(135deg, rgba(15, 10, 40, 0.92), rgba(10, 8, 30, 0.95))" }}>
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
-            <h3 className="mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,92,246,0.13),transparent_55%)] pointer-events-none" />
+            <h3 className="relative mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
             <p className="mt-1 text-sm text-slate-300">Use your email and password to continue.</p>
             <form className="mt-5 space-y-3">
               <label className="block text-sm text-slate-200">
                 Email
-                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="you@company.com" type="email" />
+                <input className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition-all duration-200 focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/20" placeholder="you@company.com" type="email" />
               </label>
               <label className="block text-sm text-slate-200">
                 Password
-                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="••••••••" type="password" />
+                <input className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition-all duration-200 focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/20" placeholder="••••••••" type="password" />
               </label>
               <div className="flex items-center justify-between text-xs text-slate-400">
                 <label className="flex items-center gap-2">
@@ -110,7 +112,7 @@ const templateSections: TemplateSection[] = [
                 </label>
                 <button className="text-emerald-200" type="button">Forgot password?</button>
               </div>
-              <button className="btn-primary w-full" type="button">Sign in</button>
+              <button className="mt-4 w-full rounded-xl py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600" type="button">Sign in</button>
             </form>
           </div>
         )
@@ -123,20 +125,21 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "JWT"],
         code: `export function JWTAuthBoilerplate() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+    <div className="rounded-2xl border border-indigo-500/30 bg-[linear-gradient(135deg,rgba(15,12,45,0.95),rgba(10,8,30,0.98))] p-6 text-white shadow-xl shadow-indigo-900/10 transition-all duration-300 relative overflow-hidden group">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
-          <h3 className="mt-1 text-xl font-semibold">JWT Authentication</h3>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent" />
+        <h3 className="mt-1 text-xl font-semibold">JWT Authentication</h3>
         </div>
-        <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs text-indigo-100">Active</span>
+        <span className="rounded-full bg-green-500/10 border border-green-500/20 px-3 py-1 text-xs text-green-300 flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" /> Active</span>
       </div>
       <div className="mt-4 space-y-3 text-sm">
-        <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-500/40 hover:bg-white/10 hover:shadow-lg hover:shadow-indigo-900/20">
           <p className="text-xs text-slate-400">Access token</p>
           <p className="mt-1 font-mono text-xs text-slate-100">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</p>
         </div>
-        <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-500/40 hover:bg-white/10 hover:shadow-lg hover:shadow-indigo-900/20">
           <p className="text-xs text-slate-400">Refresh token</p>
           <p className="mt-1 font-mono text-xs text-slate-100">rfr_89f2c8d0b7b6</p>
         </div>
@@ -146,20 +149,21 @@ const templateSections: TemplateSection[] = [
   );
 }`,
         preview: (
-          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+          <div className="rounded-2xl border border-indigo-500/30 bg-[linear-gradient(135deg,rgba(15,12,45,0.95),rgba(10,8,30,0.98))] p-6 text-white shadow-xl shadow-indigo-900/10 transition-all duration-300 relative overflow-hidden group">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent" />
                 <h3 className="mt-1 text-xl font-semibold">JWT Authentication</h3>
               </div>
-              <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs text-indigo-100">Active</span>
+              <span className="rounded-full bg-green-500/10 border border-green-500/20 px-3 py-1 text-xs text-green-300 flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" /> Active</span>
             </div>
             <div className="mt-4 space-y-3 text-sm">
-              <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-500/40 hover:bg-white/10 hover:shadow-lg hover:shadow-indigo-900/20">
                 <p className="text-xs text-slate-400">Access token</p>
                 <p className="mt-1 font-mono text-xs text-slate-100">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</p>
               </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+              <div className="rounded-xl border border-white/10 bg-white/5 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-500/40 hover:bg-white/10 hover:shadow-lg hover:shadow-indigo-900/20">
                 <p className="text-xs text-slate-400">Refresh token</p>
                 <p className="mt-1 font-mono text-xs text-slate-100">rfr_89f2c8d0b7b6</p>
               </div>
@@ -176,36 +180,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "OAuth"],
         code: `export function OAuthLogin() {
   return (
-    <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
-      <h3 className="text-xl font-semibold">Continue with OAuth</h3>
-      <p className="mt-1 text-sm text-slate-300">Choose a provider to sign in instantly.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(15,10,35,0.95),rgba(10,5,25,0.98))] p-6 text-white shadow-2xl relative overflow-hidden group">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1),transparent_55%)] pointer-events-none" />
+      <h3 className="relative text-xl font-semibold text-center">Continue with OAuth</h3>
+      <p className="relative mt-1 text-sm text-slate-300 text-center">Choose a provider to sign in instantly.</p>
       <div className="mt-4 space-y-3">
-        <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with Google</button>
-        <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with GitHub</button>
+        <button className="relative w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:shadow-lg">Continue with Google</button>
+        <button className="relative w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:shadow-lg">Continue with GitHub</button>
       </div>
-      <div className="my-4 flex items-center gap-3 text-xs text-slate-500">
+      <div className="relative my-4 flex items-center gap-3 text-xs text-slate-500">
         <span className="h-px flex-1 bg-slate-800" />
         or use email
         <span className="h-px flex-1 bg-slate-800" />
       </div>
-      <button className="btn-primary w-full" type="button">Use email instead</button>
+      <button className="relative mt-2 w-full rounded-xl py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600" type="button">Use email instead</button>
     </div>
   );
 }`,
         preview: (
-          <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
-            <h3 className="text-xl font-semibold">Continue with OAuth</h3>
-            <p className="mt-1 text-sm text-slate-300">Choose a provider to sign in instantly.</p>
+          <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-[linear-gradient(135deg,rgba(15,10,35,0.95),rgba(10,5,25,0.98))] p-6 text-white shadow-2xl relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1),transparent_55%)] pointer-events-none" />
+            <h3 className="relative text-xl font-semibold text-center">Continue with OAuth</h3>
+            <p className="relative mt-1 text-sm text-slate-300 text-center">Choose a provider to sign in instantly.</p>
             <div className="mt-4 space-y-3">
-              <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with Google</button>
-              <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with GitHub</button>
+              <button className="relative w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:shadow-lg">Continue with Google</button>
+              <button className="relative w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:shadow-lg">Continue with GitHub</button>
             </div>
-            <div className="my-4 flex items-center gap-3 text-xs text-slate-500">
+            <div className="relative my-4 flex items-center gap-3 text-xs text-slate-500">
               <span className="h-px flex-1 bg-slate-800" />
               or use email
               <span className="h-px flex-1 bg-slate-800" />
             </div>
-            <button className="btn-primary w-full" type="button">Use email instead</button>
+            <button className="relative mt-2 w-full rounded-xl py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-violet-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600" type="button">Use email instead</button>
           </div>
         )
       },
@@ -217,28 +223,30 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Reset"],
         code: `export function PasswordResetFlow() {
   return (
-    <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
-      <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Password reset</p>
-      <h3 className="mt-2 text-2xl font-semibold">Reset your password</h3>
-      <p className="mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/20 bg-[linear-gradient(135deg,rgba(5,20,20,0.97),rgba(8,30,25,0.97))] p-6 text-center text-white shadow-2xl shadow-emerald-900/10 relative overflow-hidden group">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.1),transparent_60%)] pointer-events-none" />
+      <p className="relative text-xs uppercase tracking-[0.2em] text-emerald-400">Password reset</p>
+      <h3 className="relative mt-2 text-2xl font-semibold">Reset your password</h3>
+      <p className="relative mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
       <form className="mt-4 space-y-3">
-        <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="you@company.com" type="email" />
+        <input className="relative w-full rounded-xl border border-emerald-500/20 bg-white/5 px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20" placeholder="you@company.com" type="email" />
         <button className="btn-primary w-full" type="button">Send reset link</button>
       </form>
-      <p className="mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
+      <p className="relative mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
     </div>
   );
 }`,
         preview: (
-          <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
-            <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Password reset</p>
-            <h3 className="mt-2 text-2xl font-semibold">Reset your password</h3>
-            <p className="mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
+          <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/20 bg-[linear-gradient(135deg,rgba(5,20,20,0.97),rgba(8,30,25,0.97))] p-6 text-center text-white shadow-2xl shadow-emerald-900/10 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(16,185,129,0.1),transparent_60%)] pointer-events-none" />
+            <p className="relative text-xs uppercase tracking-[0.2em] text-emerald-400">Password reset</p>
+            <h3 className="relative mt-2 text-2xl font-semibold">Reset your password</h3>
+            <p className="relative mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
             <form className="mt-4 space-y-3">
-              <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="you@company.com" type="email" />
+              <input className="relative w-full rounded-xl border border-emerald-500/20 bg-white/5 px-3 py-2 text-sm outline-none transition-all duration-200 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20" placeholder="you@company.com" type="email" />
               <button className="btn-primary w-full" type="button">Send reset link</button>
             </form>
-            <p className="mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
+            <p className="relative mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
           </div>
         )
       },
@@ -250,33 +258,35 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Verify"],
         code: `export function EmailVerificationSystem() {
   return (
-    <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
-      <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Verify email</p>
-      <h3 className="mt-2 text-2xl font-semibold">Check your inbox</h3>
+    <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(12,8,40,0.97),rgba(10,10,35,0.97))] p-6 text-center text-white shadow-2xl shadow-indigo-900/20 relative overflow-hidden group">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.1),transparent_55%)] pointer-events-none" />
+      <p className="relative text-xs uppercase tracking-[0.2em] text-indigo-400">Verify email</p>
+      <h3 className="relative mt-2 text-2xl font-semibold">Check your inbox</h3>
       <p className="mt-1 text-sm text-slate-300">We sent a verification link to your email.</p>
-      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+      <div className="relative mt-4 rounded-xl border border-indigo-500/20 bg-white/5 p-4 text-sm">
         <p className="text-slate-200">you@company.com</p>
         <p className="mt-1 text-xs text-slate-400">Link expires in 15 minutes.</p>
       </div>
       <div className="mt-4 flex flex-wrap gap-3">
-        <button className="btn-primary">Open email app</button>
-        <button className="btn-secondary">Resend link</button>
+        <button className="flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600">Open email app</button>
+        <button className="flex-1 rounded-xl border border-indigo-500/30 px-4 bg-indigo-500/10 py-2.5 text-sm font-semibold text-indigo-300 transition-all duration-200 hover:border-indigo-500/50 hover:bg-indigo-500/20">Resend link</button>
       </div>
     </div>
   );
 }`,
         preview: (
-          <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
-            <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Verify email</p>
-            <h3 className="mt-2 text-2xl font-semibold">Check your inbox</h3>
+          <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(12,8,40,0.97),rgba(10,10,35,0.97))] p-6 text-center text-white shadow-2xl shadow-indigo-900/20 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.1),transparent_55%)] pointer-events-none" />
+            <p className="relative text-xs uppercase tracking-[0.2em] text-indigo-400">Verify email</p>
+            <h3 className="relative mt-2 text-2xl font-semibold">Check your inbox</h3>
             <p className="mt-1 text-sm text-slate-300">We sent a verification link to your email.</p>
-            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+            <div className="relative mt-4 rounded-xl border border-indigo-500/20 bg-white/5 p-4 text-sm">
               <p className="text-slate-200">you@company.com</p>
               <p className="mt-1 text-xs text-slate-400">Link expires in 15 minutes.</p>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
-              <button className="btn-primary">Open email app</button>
-              <button className="btn-secondary">Resend link</button>
+              <button className="flex-1 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:shadow-indigo-500/25 active:scale-[0.98] bg-gradient-to-br from-violet-600 to-indigo-600">Open email app</button>
+              <button className="flex-1 rounded-xl border border-indigo-500/30 px-4 bg-indigo-500/10 py-2.5 text-sm font-semibold text-indigo-300 transition-all duration-200 hover:border-indigo-500/50 hover:bg-indigo-500/20">Resend link</button>
             </div>
           </div>
         )
@@ -295,7 +305,7 @@ const templateSections: TemplateSection[] = [
       <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
       <div className="mt-4 grid grid-cols-6 gap-2">
         {Array.from({ length: 6 }).map((_, idx) => (
-          <input key={idx} maxLength={1} className="h-12 rounded-lg border border-slate-800 bg-slate-900 text-center text-lg" />
+          <input key={idx} maxLength={1} className="h-14 rounded-xl border border-purple-500/30 bg-purple-500/5 text-center text-xl font-bold text-white outline-none transition-all duration-200 focus:border-purple-400/80 focus:bg-purple-500/10 focus:shadow-lg focus:shadow-purple-500/20 focus:ring-2 focus:ring-purple-500/20" />
         ))}
       </div>
       <button className="btn-primary mt-4 w-full" type="button">Verify code</button>
@@ -309,7 +319,7 @@ const templateSections: TemplateSection[] = [
             <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
             <div className="mt-4 grid grid-cols-6 gap-2">
               {Array.from({ length: 6 }).map((_, idx) => (
-                <input key={idx} maxLength={1} className="h-12 rounded-lg border border-slate-800 bg-slate-900 text-center text-lg" />
+                <input key={idx} maxLength={1} className="h-14 rounded-xl border border-purple-500/30 bg-purple-500/5 text-center text-xl font-bold text-white outline-none transition-all duration-200 focus:border-purple-400/80 focus:bg-purple-500/10 focus:shadow-lg focus:shadow-purple-500/20 focus:ring-2 focus:ring-purple-500/20" />
               ))}
             </div>
             <button className="btn-primary mt-4 w-full" type="button">Verify code</button>
@@ -2549,7 +2559,7 @@ export default function TemplatesPage() {
     () => (activeSection ? activeSection.templates.find(t => t.id === selectedTemplateId) ?? null : null),
     [activeSection, selectedTemplateId]
   );
-  const previewTemplate = hoveredTemplate ?? selectedTemplate ?? null;
+  const previewTemplate = selectedTemplate ?? hoveredTemplate ?? null;
 
   const renderPreview = (template?: NormalizedTemplateExample | null) => {
     if (!template) return null;
@@ -3322,12 +3332,14 @@ Next update in 20 minutes. Thank you for your patience.`;
     setActiveSectionId(sectionId);
     setSelectedTemplateId(null);
     setHoveredTemplateId(null);
+    setHoveredTemplateId(null);
     setActiveTab("react");
   };
 
   const handleBackToTopics = () => {
     setActiveSectionId(null);
     setSelectedTemplateId(null);
+    setHoveredTemplateId(null);
     setHoveredTemplateId(null);
     setCopiedId(null);
     setActiveTab("react");
@@ -3408,7 +3420,7 @@ Next update in 20 minutes. Thank you for your patience.`;
               </div>
             </div>
 
-            <section className="grid gap-6 lg:grid-cols-[0.9fr,1.1fr]">
+            <section className="grid gap-6 lg:grid-cols-[4fr,6fr]">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-sm font-semibold text-slate-200">
                   <LayoutTemplate className="h-4 w-4" /> Template names
@@ -3425,9 +3437,8 @@ Next update in 20 minutes. Thank you for your patience.`;
                           setSelectedTemplateId(template.id);
                           setActiveTab("react");
                         }}
-                        className={`group w-full rounded-xl border px-4 py-3 text-left transition-all duration-200 hover:border-white/50 hover:bg-white/5 ${
-                          active ? "border-white/70 bg-white/5 shadow-lg shadow-black/20" : "border-slate-800 bg-slate-950"
-                        }`}
+                        className={`group w-full rounded-xl border px-4 py-3 text-left transition-all duration-200 hover:border-white/50 hover:bg-white/5 ${active ? "border-white/70 bg-white/5 shadow-lg shadow-black/20" : "border-slate-800 bg-slate-950"
+                          }`}
                       >
                         <div className="flex items-center justify-between gap-2">
                           <div>
@@ -3461,9 +3472,8 @@ Next update in 20 minutes. Thank you for your patience.`;
                     <button
                       onClick={copyCode}
                       disabled={!selectedTemplate}
-                      className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition hover:border-white/30 hover:shadow-lg hover:shadow-emerald-500/10 ${
-                        selectedTemplate ? "border-slate-800 bg-slate-900 text-slate-100" : "border-slate-800 bg-slate-900/70 text-slate-500 cursor-not-allowed"
-                      }`}
+                      className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition hover:border-white/30 hover:shadow-lg hover:shadow-emerald-500/10 ${selectedTemplate ? "border-slate-800 bg-slate-900 text-slate-100" : "border-slate-800 bg-slate-900/70 text-slate-500 cursor-not-allowed"
+                        }`}
                     >
                       {copiedId === selectedTemplate?.id ? <Check className="h-4 w-4 text-emerald-300" /> : <Copy className="h-4 w-4" />}
                       {copiedId === selectedTemplate?.id ? "Copied" : "Copy code"}
@@ -3506,11 +3516,10 @@ Next update in 20 minutes. Thank you for your patience.`;
                               key={tab}
                               type="button"
                               onClick={() => setActiveTab(tab)}
-                              className={`rounded-full border px-2 py-0.5 uppercase tracking-wide transition ${
-                                activeTab === tab
+                              className={`rounded-full border px-2 py-0.5 uppercase tracking-wide transition ${activeTab === tab
                                   ? "border-white/50 bg-white/10 text-white"
                                   : "border-slate-700 bg-slate-900 text-slate-300 hover:border-white/30"
-                              }`}
+                                }`}
                             >
                               {tab}
                             </button>
@@ -3518,7 +3527,7 @@ Next update in 20 minutes. Thank you for your patience.`;
                           <span>{codeLabelByTab[activeTab]}</span>
                         </div>
                       </div>
-                      <pre className="max-h-[320px] overflow-auto px-4 py-3 text-[13px] leading-relaxed text-slate-100 font-mono whitespace-pre">
+                      <pre className="max-h-[320px] overflow-auto px-4 py-3 text-[13px] leading-relaxed text-slate-100 font-mono whitespace-pre-wrap break-words break-all">
                         <code>{selectedTemplate.code[activeTab]}</code>
                       </pre>
                     </div>
