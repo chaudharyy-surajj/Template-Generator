@@ -21,21 +21,10 @@ interface TemplateSection {
   templates: TemplateExample[];
 }
 
-const createPreview = (title: string, subtitle: string, badge: string, gradient: string) => (
-  <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-5 shadow-lg shadow-black/30 transition-all duration-300 ease-out">
-    <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${gradient} blur-3xl opacity-70`} />
-    <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white">
-      <span className="h-2 w-2 rounded-full bg-emerald-400" />
-      {badge}
-    </div>
-    <div className="mt-3 space-y-2">
-      <p className="text-lg font-semibold text-white">{title}</p>
-      <p className="text-sm text-slate-200">{subtitle}</p>
-      <div className="flex flex-wrap gap-2 text-[11px] text-slate-100">
-        <span className="rounded-full bg-white/10 px-2 py-1">Live preview</span>
-        <span className="rounded-full bg-white/10 px-2 py-1">Tailwind</span>
-      </div>
-    </div>
+const createPreview = (title: string, subtitle: string, _badge?: string, _gradient?: string) => (
+  <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 text-white">
+    <h3 className="text-lg font-semibold">{title}</h3>
+    <p className="text-sm text-slate-300">{subtitle}</p>
   </div>
 );
 
@@ -54,13 +43,56 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Login"],
         code: `export function EmailPasswordLoginSystem() {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Email & Password Login</h3>
-      <p className="text-sm text-slate-300">Secure sign-in with validation and remember-me.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
+      <h3 className="mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
+      <p className="mt-1 text-sm text-slate-300">Use your email and password to continue.</p>
+      <form className="mt-5 space-y-3">
+        <label className="block text-sm text-slate-200">
+          Email
+          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="you@company.com" type="email" />
+        </label>
+        <label className="block text-sm text-slate-200">
+          Password
+          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="••••••••" type="password" />
+        </label>
+        <div className="flex items-center justify-between text-xs text-slate-400">
+          <label className="flex items-center gap-2">
+            <input className="h-4 w-4 accent-emerald-400" type="checkbox" />
+            Remember me
+          </label>
+          <button className="text-emerald-200" type="button">Forgot password?</button>
+        </div>
+        <button className="btn-primary w-full" type="button">Sign in</button>
+      </form>
     </div>
   );
 }`,
-        preview: createPreview("Email & Password Login", "Secure sign-in with form validation.", "Auth", "from-purple-500/30 via-indigo-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome back</p>
+            <h3 className="mt-2 text-2xl font-semibold">Sign in to your workspace</h3>
+            <p className="mt-1 text-sm text-slate-300">Use your email and password to continue.</p>
+            <form className="mt-5 space-y-3">
+              <label className="block text-sm text-slate-200">
+                Email
+                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="you@company.com" type="email" />
+              </label>
+              <label className="block text-sm text-slate-200">
+                Password
+                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="••••••••" type="password" />
+              </label>
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <label className="flex items-center gap-2">
+                  <input className="h-4 w-4 accent-emerald-400" type="checkbox" />
+                  Remember me
+                </label>
+                <button className="text-emerald-200" type="button">Forgot password?</button>
+              </div>
+              <button className="btn-primary w-full" type="button">Sign in</button>
+            </form>
+          </div>
+        )
       },
       {
         id: "jwt-auth",
@@ -70,13 +102,50 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "JWT"],
         code: `export function JWTAuthBoilerplate() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">JWT Authentication</h3>
-      <p className="text-sm text-slate-300">Access tokens, refresh flow, and guards.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
+          <h3 className="mt-1 text-xl font-semibold">JWT Authentication</h3>
+        </div>
+        <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs text-indigo-100">Active</span>
+      </div>
+      <div className="mt-4 space-y-3 text-sm">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+          <p className="text-xs text-slate-400">Access token</p>
+          <p className="mt-1 font-mono text-xs text-slate-100">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+          <p className="text-xs text-slate-400">Refresh token</p>
+          <p className="mt-1 font-mono text-xs text-slate-100">rfr_89f2c8d0b7b6</p>
+        </div>
+      </div>
+      <button className="btn-secondary mt-4 w-full" type="button">Rotate tokens</button>
     </div>
   );
 }`,
-        preview: createPreview("JWT Authentication", "Token-based auth with refresh flow.", "Auth", "from-indigo-500/30 via-purple-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Security</p>
+                <h3 className="mt-1 text-xl font-semibold">JWT Authentication</h3>
+              </div>
+              <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-xs text-indigo-100">Active</span>
+            </div>
+            <div className="mt-4 space-y-3 text-sm">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+                <p className="text-xs text-slate-400">Access token</p>
+                <p className="mt-1 font-mono text-xs text-slate-100">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</p>
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+                <p className="text-xs text-slate-400">Refresh token</p>
+                <p className="mt-1 font-mono text-xs text-slate-100">rfr_89f2c8d0b7b6</p>
+              </div>
+            </div>
+            <button className="btn-secondary mt-4 w-full" type="button">Rotate tokens</button>
+          </div>
+        )
       },
       {
         id: "oauth-login",
@@ -86,13 +155,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "OAuth"],
         code: `export function OAuthLogin() {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">OAuth Login</h3>
-      <p className="text-sm text-slate-300">Google and GitHub provider buttons.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Continue with OAuth</h3>
+      <p className="mt-1 text-sm text-slate-300">Choose a provider to sign in instantly.</p>
+      <div className="mt-4 space-y-3">
+        <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with Google</button>
+        <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with GitHub</button>
+      </div>
+      <div className="my-4 flex items-center gap-3 text-xs text-slate-500">
+        <span className="h-px flex-1 bg-slate-800" />
+        or use email
+        <span className="h-px flex-1 bg-slate-800" />
+      </div>
+      <button className="btn-primary w-full" type="button">Use email instead</button>
     </div>
   );
 }`,
-        preview: createPreview("OAuth Login", "Google and GitHub login buttons.", "Auth", "from-sky-500/25 via-indigo-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Continue with OAuth</h3>
+            <p className="mt-1 text-sm text-slate-300">Choose a provider to sign in instantly.</p>
+            <div className="mt-4 space-y-3">
+              <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with Google</button>
+              <button className="w-full rounded-lg border border-slate-800 bg-slate-900 px-4 py-2 text-sm">Continue with GitHub</button>
+            </div>
+            <div className="my-4 flex items-center gap-3 text-xs text-slate-500">
+              <span className="h-px flex-1 bg-slate-800" />
+              or use email
+              <span className="h-px flex-1 bg-slate-800" />
+            </div>
+            <button className="btn-primary w-full" type="button">Use email instead</button>
+          </div>
+        )
       },
       {
         id: "password-reset",
@@ -102,13 +196,30 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Reset"],
         code: `export function PasswordResetFlow() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Reset Password</h3>
-      <p className="text-sm text-slate-300">Email capture and success confirmation.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Password reset</p>
+      <h3 className="mt-2 text-2xl font-semibold">Reset your password</h3>
+      <p className="mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
+      <form className="mt-4 space-y-3">
+        <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="you@company.com" type="email" />
+        <button className="btn-primary w-full" type="button">Send reset link</button>
+      </form>
+      <p className="mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
     </div>
   );
 }`,
-        preview: createPreview("Password Reset", "Reset flow with success state.", "Auth", "from-emerald-500/25 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Password reset</p>
+            <h3 className="mt-2 text-2xl font-semibold">Reset your password</h3>
+            <p className="mt-1 text-sm text-slate-300">We will send a reset link to your inbox.</p>
+            <form className="mt-4 space-y-3">
+              <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="you@company.com" type="email" />
+              <button className="btn-primary w-full" type="button">Send reset link</button>
+            </form>
+            <p className="mt-3 text-xs text-slate-400">Did not get an email? Check spam or try again.</p>
+          </div>
+        )
       },
       {
         id: "email-verification",
@@ -118,13 +229,36 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "Verify"],
         code: `export function EmailVerificationSystem() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Email Verification</h3>
-      <p className="text-sm text-slate-300">Confirm email ownership with secure links.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Verify email</p>
+      <h3 className="mt-2 text-2xl font-semibold">Check your inbox</h3>
+      <p className="mt-1 text-sm text-slate-300">We sent a verification link to your email.</p>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+        <p className="text-slate-200">you@company.com</p>
+        <p className="mt-1 text-xs text-slate-400">Link expires in 15 minutes.</p>
+      </div>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <button className="btn-primary">Open email app</button>
+        <button className="btn-secondary">Resend link</button>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Email Verification", "Verify user email with secure links.", "Auth", "from-indigo-500/25 via-purple-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-indigo-200">Verify email</p>
+            <h3 className="mt-2 text-2xl font-semibold">Check your inbox</h3>
+            <p className="mt-1 text-sm text-slate-300">We sent a verification link to your email.</p>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+              <p className="text-slate-200">you@company.com</p>
+              <p className="mt-1 text-xs text-slate-400">Link expires in 15 minutes.</p>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <button className="btn-primary">Open email app</button>
+              <button className="btn-secondary">Resend link</button>
+            </div>
+          </div>
+        )
       },
       {
         id: "mfa-otp",
@@ -134,13 +268,32 @@ const templateSections: TemplateSection[] = [
         tags: ["Auth", "MFA"],
         code: `export function MultiFactorAuthenticationOTP() {
   return (
-    <div className="rounded-2xl border border-purple-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Multi-Factor Authentication</h3>
-      <p className="text-sm text-slate-300">Enter the 6-digit OTP to verify.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-purple-500/30 bg-slate-950 p-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-purple-200">Security step</p>
+      <h3 className="mt-2 text-2xl font-semibold">Enter your 6-digit code</h3>
+      <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
+      <div className="mt-4 grid grid-cols-6 gap-2">
+        {Array.from({ length: 6 }).map((_, idx) => (
+          <input key={idx} maxLength={1} className="h-12 rounded-lg border border-slate-800 bg-slate-900 text-center text-lg" />
+        ))}
+      </div>
+      <button className="btn-primary mt-4 w-full" type="button">Verify code</button>
     </div>
   );
 }`,
-        preview: createPreview("Multi-Factor Authentication", "OTP verification entry.", "Auth", "from-purple-500/30 via-indigo-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-purple-500/30 bg-slate-950 p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-purple-200">Security step</p>
+            <h3 className="mt-2 text-2xl font-semibold">Enter your 6-digit code</h3>
+            <p className="mt-1 text-sm text-slate-300">We sent a code to your authenticator app.</p>
+            <div className="mt-4 grid grid-cols-6 gap-2">
+              {Array.from({ length: 6 }).map((_, idx) => (
+                <input key={idx} maxLength={1} className="h-12 rounded-lg border border-slate-800 bg-slate-900 text-center text-lg" />
+              ))}
+            </div>
+            <button className="btn-primary mt-4 w-full" type="button">Verify code</button>
+          </div>
+        )
       }
     ]
   },
@@ -158,13 +311,48 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "Stripe"],
         code: `export function StripeSubscriptionIntegration() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Stripe Subscription</h3>
-      <p className="text-sm text-slate-300">Plan selection and recurring billing.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Subscriptions</p>
+          <h3 className="mt-1 text-xl font-semibold">Choose your plan</h3>
+        </div>
+        <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">Stripe</span>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ name: "Starter", price: "$19" }, { name: "Growth", price: "$49", highlight: true }, { name: "Scale", price: "$129" }].map(plan => (
+          <div key={plan.name} className={plan.highlight ? "rounded-xl border border-amber-400/50 bg-amber-500/5 p-4" : "rounded-xl border border-slate-800 bg-slate-900 p-4"}>
+            <p className="text-sm font-semibold">{plan.name}</p>
+            <p className="mt-2 text-2xl font-semibold">{plan.price}</p>
+            <p className="text-xs text-slate-400">per month</p>
+            <button className="btn-primary mt-4 w-full" type="button">Select plan</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Stripe Subscription", "Recurring billing with Stripe.", "Billing", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Subscriptions</p>
+                <h3 className="mt-1 text-xl font-semibold">Choose your plan</h3>
+              </div>
+              <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">Stripe</span>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ name: "Starter", price: "$19" }, { name: "Growth", price: "$49", highlight: true }, { name: "Scale", price: "$129" }].map(plan => (
+                <div key={plan.name} className={plan.highlight ? "rounded-xl border border-amber-400/50 bg-amber-500/5 p-4" : "rounded-xl border border-slate-800 bg-slate-900 p-4"}>
+                  <p className="text-sm font-semibold">{plan.name}</p>
+                  <p className="mt-2 text-2xl font-semibold">{plan.price}</p>
+                  <p className="text-xs text-slate-400">per month</p>
+                  <button className="btn-primary mt-4 w-full" type="button">Select plan</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "one-time-checkout",
@@ -174,13 +362,54 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "Checkout"],
         code: `export function OneTimePaymentCheckout() {
   return (
-    <div className="rounded-2xl border border-orange-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">One-Time Checkout</h3>
-      <p className="text-sm text-slate-300">Simple payment form and confirmation.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-2xl font-semibold">Complete your purchase</h3>
+      <p className="mt-1 text-sm text-slate-300">Pay once and get instant access.</p>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+        <div className="flex items-center justify-between">
+          <span>Template bundle</span>
+          <span className="font-semibold">$129</span>
+        </div>
+        <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
+          <span>Tax</span>
+          <span>$0</span>
+        </div>
+      </div>
+      <form className="mt-4 space-y-3">
+        <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="Card number" />
+        <div className="grid grid-cols-2 gap-3">
+          <input className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="MM / YY" />
+          <input className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="CVC" />
+        </div>
+        <button className="btn-primary w-full" type="button">Pay $129</button>
+      </form>
     </div>
   );
 }`,
-        preview: createPreview("One-Time Checkout", "Single purchase checkout flow.", "Billing", "from-orange-500/30 via-amber-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-2xl font-semibold">Complete your purchase</h3>
+            <p className="mt-1 text-sm text-slate-300">Pay once and get instant access.</p>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+              <div className="flex items-center justify-between">
+                <span>Template bundle</span>
+                <span className="font-semibold">$129</span>
+              </div>
+              <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
+                <span>Tax</span>
+                <span>$0</span>
+              </div>
+            </div>
+            <form className="mt-4 space-y-3">
+              <input className="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="Card number" />
+              <div className="grid grid-cols-2 gap-3">
+                <input className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="MM / YY" />
+                <input className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="CVC" />
+              </div>
+              <button className="btn-primary w-full" type="button">Pay $129</button>
+            </form>
+          </div>
+        )
       },
       {
         id: "pricing-ui",
@@ -190,13 +419,62 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "Pricing"],
         code: `export function PricingPageUI() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Pricing Page UI</h3>
-      <p className="text-sm text-slate-300">Plan cards with feature highlights.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Pricing</p>
+          <h3 className="mt-1 text-xl font-semibold">Simple, predictable pricing</h3>
+        </div>
+        <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">Monthly</span>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ name: "Starter", price: "$19", features: ["2 projects", "Email support"] }, { name: "Growth", price: "$49", features: ["Unlimited projects", "Priority support"], highlight: true }, { name: "Scale", price: "$129", features: ["SSO", "Dedicated CSM"] }].map(plan => (
+          <div key={plan.name} className={plan.highlight ? "rounded-xl border border-amber-400/50 bg-amber-500/5 p-4" : "rounded-xl border border-slate-800 bg-slate-900 p-4"}>
+            <p className="text-sm font-semibold">{plan.name}</p>
+            <p className="mt-2 text-2xl font-semibold">{plan.price}</p>
+            <ul className="mt-3 space-y-2 text-xs text-slate-300">
+              {plan.features.map(item => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <button className="btn-primary mt-4 w-full" type="button">Choose plan</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Pricing Page UI", "Tiered pricing with highlights.", "Pricing", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Pricing</p>
+                <h3 className="mt-1 text-xl font-semibold">Simple, predictable pricing</h3>
+              </div>
+              <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">Monthly</span>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ name: "Starter", price: "$19", features: ["2 projects", "Email support"] }, { name: "Growth", price: "$49", features: ["Unlimited projects", "Priority support"], highlight: true }, { name: "Scale", price: "$129", features: ["SSO", "Dedicated CSM"] }].map(plan => (
+                <div key={plan.name} className={plan.highlight ? "rounded-xl border border-amber-400/50 bg-amber-500/5 p-4" : "rounded-xl border border-slate-800 bg-slate-900 p-4"}>
+                  <p className="text-sm font-semibold">{plan.name}</p>
+                  <p className="mt-2 text-2xl font-semibold">{plan.price}</p>
+                  <ul className="mt-3 space-y-2 text-xs text-slate-300">
+                    {plan.features.map(item => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="btn-primary mt-4 w-full" type="button">Choose plan</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "invoice-generator",
@@ -206,13 +484,50 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "Invoices"],
         code: `export function InvoiceGeneratorSystem() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Invoice Generator</h3>
-      <p className="text-sm text-slate-300">Create and download invoices on demand.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Invoice Generator</h3>
+        <button className="btn-secondary" type="button">Create invoice</button>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[{ id: "INV-3122", amount: "$129", date: "Mar 12" }, { id: "INV-3098", amount: "$49", date: "Feb 12" }, { id: "INV-3071", amount: "$49", date: "Jan 12" }].map(invoice => (
+          <div key={invoice.id} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <div>
+              <p className="font-medium">{invoice.id}</p>
+              <p className="text-xs text-slate-400">{invoice.date}</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-semibold">{invoice.amount}</span>
+              <button className="text-xs text-amber-200" type="button">Download</button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Invoice Generator", "Generate invoices for customers.", "Billing", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Invoice Generator</h3>
+              <button className="btn-secondary" type="button">Create invoice</button>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[{ id: "INV-3122", amount: "$129", date: "Mar 12" }, { id: "INV-3098", amount: "$49", date: "Feb 12" }, { id: "INV-3071", amount: "$49", date: "Jan 12" }].map(invoice => (
+                <div key={invoice.id} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <div>
+                    <p className="font-medium">{invoice.id}</p>
+                    <p className="text-xs text-slate-400">{invoice.date}</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-semibold">{invoice.amount}</span>
+                    <button className="text-xs text-amber-200" type="button">Download</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "billing-history",
@@ -222,13 +537,50 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "History"],
         code: `export function BillingHistoryDashboard() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Billing History</h3>
-      <p className="text-sm text-slate-300">Invoices, receipts, and payment status.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Billing History</h3>
+        <span className="text-xs text-slate-400">Last 90 days</span>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[{ label: "Stripe • Growth", status: "Paid", amount: "$49" }, { label: "Stripe • Growth", status: "Paid", amount: "$49" }, { label: "Stripe • Scale", status: "Refunded", amount: "$129" }].map((item, idx) => (
+          <div key={item.label + "-" + idx} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <div>
+              <p className="font-medium">{item.label}</p>
+              <p className="text-xs text-slate-400">Mar {12 - idx}, 2026</p>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-xs rounded-full bg-white/10 px-2 py-1">{item.status}</span>
+              <span className="font-semibold">{item.amount}</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Billing History", "Transaction history dashboard.", "Billing", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Billing History</h3>
+              <span className="text-xs text-slate-400">Last 90 days</span>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[{ label: "Stripe • Growth", status: "Paid", amount: "$49" }, { label: "Stripe • Growth", status: "Paid", amount: "$49" }, { label: "Stripe • Scale", status: "Refunded", amount: "$129" }].map((item, idx) => (
+                <div key={`${item.label}-${idx}`} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <div>
+                    <p className="font-medium">{item.label}</p>
+                    <p className="text-xs text-slate-400">Mar {12 - idx}, 2026</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs rounded-full bg-white/10 px-2 py-1">{item.status}</span>
+                    <span className="font-semibold">{item.amount}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "coupon-discount",
@@ -238,13 +590,54 @@ const templateSections: TemplateSection[] = [
         tags: ["Billing", "Discounts"],
         code: `export function CouponDiscountSystem() {
   return (
-    <div className="rounded-2xl border border-orange-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Coupon & Discount</h3>
-      <p className="text-sm text-slate-300">Apply coupons and promos at checkout.</p>
+    <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Apply a promo code</h3>
+      <p className="mt-1 text-sm text-slate-300">Save on your first month.</p>
+      <div className="mt-4 flex gap-3">
+        <input className="flex-1 rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="SAVE20" />
+        <button className="btn-primary" type="button">Apply</button>
+      </div>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm">
+        <div className="flex items-center justify-between">
+          <span>Subtotal</span>
+          <span>$49</span>
+        </div>
+        <div className="mt-2 flex items-center justify-between text-emerald-200">
+          <span>Discount</span>
+          <span>-$9.80</span>
+        </div>
+        <div className="mt-2 flex items-center justify-between font-semibold">
+          <span>Total</span>
+          <span>$39.20</span>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Coupon & Discount", "Promo codes and discounts.", "Billing", "from-orange-500/30 via-amber-500/20 to-slate-500/10")
+        preview: (
+          <div className="mx-auto max-w-md rounded-2xl border border-orange-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Apply a promo code</h3>
+            <p className="mt-1 text-sm text-slate-300">Save on your first month.</p>
+            <div className="mt-4 flex gap-3">
+              <input className="flex-1 rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="SAVE20" />
+              <button className="btn-primary" type="button">Apply</button>
+            </div>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm">
+              <div className="flex items-center justify-between">
+                <span>Subtotal</span>
+                <span>$49</span>
+              </div>
+              <div className="mt-2 flex items-center justify-between text-emerald-200">
+                <span>Discount</span>
+                <span>-$9.80</span>
+              </div>
+              <div className="mt-2 flex items-center justify-between font-semibold">
+                <span>Total</span>
+                <span>$39.20</span>
+              </div>
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -262,13 +655,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Subscription", "Plans"],
         code: `export function PlanUpgradeDowngradeLogic() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Plan Changes</h3>
-      <p className="text-sm text-slate-300">Upgrade, downgrade, and proration logic.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Current plan</p>
+          <h3 className="mt-1 text-2xl font-semibold">Growth</h3>
+        </div>
+        <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Renews in 12d</span>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {["Starter", "Growth", "Scale"].map(plan => (
+          <div key={plan} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-sm font-semibold">{plan}</p>
+            <p className="text-xs text-slate-400">Best for {plan === "Scale" ? "enterprise" : "teams"}</p>
+            <button className="btn-secondary mt-3 w-full" type="button">Switch to {plan}</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Plan Upgrade & Downgrade", "Switch plans with prorations.", "Plans", "from-emerald-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Current plan</p>
+                <h3 className="mt-1 text-2xl font-semibold">Growth</h3>
+              </div>
+              <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Renews in 12d</span>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {["Starter", "Growth", "Scale"].map(plan => (
+                <div key={plan} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-sm font-semibold">{plan}</p>
+                  <p className="text-xs text-slate-400">Best for {plan === "Scale" ? "enterprise" : "teams"}</p>
+                  <button className="btn-secondary mt-3 w-full" type="button">Switch to {plan}</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "feature-gating",
@@ -278,13 +704,36 @@ const templateSections: TemplateSection[] = [
         tags: ["Subscription", "Gating"],
         code: `export function FreeVsPaidFeatureGating() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Feature Gating</h3>
-      <p className="text-sm text-slate-300">Lock premium features behind paid tiers.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Feature access</h3>
+      <p className="mt-1 text-sm text-slate-300">Upgrade to unlock premium features.</p>
+      <ul className="mt-4 space-y-2 text-sm">
+        {["Custom domains", "Team roles", "Usage exports"].map(item => (
+          <li key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{item}</span>
+            <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">Pro</span>
+          </li>
+        ))}
+      </ul>
+      <button className="btn-primary mt-4 w-full" type="button">Upgrade to Pro</button>
     </div>
   );
 }`,
-        preview: createPreview("Feature Gating", "Lock premium features by plan.", "Gating", "from-emerald-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Feature access</h3>
+            <p className="mt-1 text-sm text-slate-300">Upgrade to unlock premium features.</p>
+            <ul className="mt-4 space-y-2 text-sm">
+              {["Custom domains", "Team roles", "Usage exports"].map(item => (
+                <li key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{item}</span>
+                  <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">Pro</span>
+                </li>
+              ))}
+            </ul>
+            <button className="btn-primary mt-4 w-full" type="button">Upgrade to Pro</button>
+          </div>
+        )
       },
       {
         id: "subscription-status",
@@ -294,13 +743,32 @@ const templateSections: TemplateSection[] = [
         tags: ["Subscription", "Status"],
         code: `export function SubscriptionStatusTracker() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Subscription Status</h3>
-      <p className="text-sm text-slate-300">Track active, trialing, or past due.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Subscription status</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ label: "Active", color: "bg-emerald-500/15 text-emerald-100" }, { label: "Trialing", color: "bg-amber-500/15 text-amber-100" }, { label: "Past due", color: "bg-rose-500/15 text-rose-100" }].map(item => (
+          <div key={item.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-sm font-semibold">{item.label}</p>
+            <span className={"mt-2 inline-block rounded-full px-3 py-1 text-xs " + item.color}>Status</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Subscription Status", "Track subscription states.", "Status", "from-emerald-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Subscription status</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ label: "Active", color: "bg-emerald-500/15 text-emerald-100" }, { label: "Trialing", color: "bg-amber-500/15 text-amber-100" }, { label: "Past due", color: "bg-rose-500/15 text-rose-100" }].map(item => (
+                <div key={item.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-sm font-semibold">{item.label}</p>
+                  <span className={`mt-2 inline-block rounded-full px-3 py-1 text-xs ${item.color}`}>Status</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "trial-period",
@@ -310,13 +778,36 @@ const templateSections: TemplateSection[] = [
         tags: ["Subscription", "Trial"],
         code: `export function TrialPeriodSystem() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Trial Period</h3>
-      <p className="text-sm text-slate-300">Trial countdown and conversion prompts.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Trial</p>
+          <h3 className="mt-1 text-2xl font-semibold">7 days left</h3>
+        </div>
+        <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Ends Mar 21</span>
+      </div>
+      <div className="mt-4 h-2 rounded-full bg-slate-800">
+        <div className="h-full w-2/3 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" />
+      </div>
+      <button className="btn-primary mt-4 w-full" type="button">Upgrade now</button>
     </div>
   );
 }`,
-        preview: createPreview("Trial Period", "Trial onboarding and expiry.", "Trial", "from-emerald-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-emerald-200">Trial</p>
+                <h3 className="mt-1 text-2xl font-semibold">7 days left</h3>
+              </div>
+              <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Ends Mar 21</span>
+            </div>
+            <div className="mt-4 h-2 rounded-full bg-slate-800">
+              <div className="h-full w-2/3 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" />
+            </div>
+            <button className="btn-primary mt-4 w-full" type="button">Upgrade now</button>
+          </div>
+        )
       },
       {
         id: "usage-based-billing",
@@ -326,13 +817,44 @@ const templateSections: TemplateSection[] = [
         tags: ["Subscription", "Usage"],
         code: `export function UsageBasedBillingSystem() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Usage-Based Billing</h3>
-      <p className="text-sm text-slate-300">Meter usage and bill by consumption.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Usage this month</h3>
+      <p className="mt-1 text-sm text-slate-300">API calls billed by consumption.</p>
+      <div className="mt-4 space-y-3">
+        {[{ label: "API calls", value: "72%", fill: "72%" }, { label: "Seats", value: "12 / 20", fill: "60%" }].map(item => (
+          <div key={item.label} className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+            <div className="flex items-center justify-between text-sm">
+              <span>{item.label}</span>
+              <span className="text-slate-300">{item.value}</span>
+            </div>
+            <div className="mt-2 h-2 rounded-full bg-slate-800">
+              <div className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" style={{ width: item.fill }} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Usage-Based Billing", "Meter usage by consumption.", "Usage", "from-emerald-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Usage this month</h3>
+            <p className="mt-1 text-sm text-slate-300">API calls billed by consumption.</p>
+            <div className="mt-4 space-y-3">
+              {[{ label: "API calls", value: "72%", fill: "72%" }, { label: "Seats", value: "12 / 20", fill: "60%" }].map(item => (
+                <div key={item.label} className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+                  <div className="flex items-center justify-between text-sm">
+                    <span>{item.label}</span>
+                    <span className="text-slate-300">{item.value}</span>
+                  </div>
+                  <div className="mt-2 h-2 rounded-full bg-slate-800">
+                    <div className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" style={{ width: item.fill }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -350,13 +872,60 @@ const templateSections: TemplateSection[] = [
         tags: ["Dashboard", "Admin"],
         code: `export function AdminDashboardUI() {
   return (
-    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Admin Dashboard</h3>
-      <p className="text-sm text-slate-300">Top-level metrics and controls.</p>
+    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Admin Dashboard</h3>
+        <button className="btn-secondary" type="button">Export report</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ label: "MRR", value: "$42.8k" }, { label: "New users", value: "1,204" }, { label: "Churn", value: "2.1%" }].map(stat => (
+          <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+        <p className="font-semibold">Recent alerts</p>
+        <ul className="mt-2 space-y-2 text-slate-300">
+          {["API error spike", "Trial conversions up", "2 failed webhooks"].map(item => (
+            <li key={item} className="flex items-center justify-between">
+              <span>{item}</span>
+              <span className="text-xs text-slate-400">Just now</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Admin Dashboard", "Overview metrics for admins.", "Dashboard", "from-blue-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Admin Dashboard</h3>
+              <button className="btn-secondary" type="button">Export report</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ label: "MRR", value: "$42.8k" }, { label: "New users", value: "1,204" }, { label: "Churn", value: "2.1%" }].map(stat => (
+                <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+              <p className="font-semibold">Recent alerts</p>
+              <ul className="mt-2 space-y-2 text-slate-300">
+                {["API error spike", "Trial conversions up", "2 failed webhooks"].map(item => (
+                  <li key={item} className="flex items-center justify-between">
+                    <span>{item}</span>
+                    <span className="text-xs text-slate-400">Just now</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )
       },
       {
         id: "user-dashboard-layout",
@@ -366,13 +935,44 @@ const templateSections: TemplateSection[] = [
         tags: ["Dashboard", "User"],
         code: `export function UserDashboardLayout() {
   return (
-    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">User Dashboard</h3>
-      <p className="text-sm text-slate-300">Personalized widgets and summaries.</p>
+    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <div>
+          <h3 className="text-xl font-semibold">Welcome back, Jamie</h3>
+          <p className="text-sm text-slate-300">Here is what needs attention today.</p>
+        </div>
+        <button className="btn-primary" type="button">Create project</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        {["Design system", "Billing revamp", "Launch email"].map(project => (
+          <div key={project} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-sm font-semibold">{project}</p>
+            <p className="text-xs text-slate-400">Updated 2h ago</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("User Dashboard", "Personalized user layout.", "Dashboard", "from-blue-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-semibold">Welcome back, Jamie</h3>
+                <p className="text-sm text-slate-300">Here is what needs attention today.</p>
+              </div>
+              <button className="btn-primary" type="button">Create project</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              {["Design system", "Billing revamp", "Launch email"].map(project => (
+                <div key={project} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-sm font-semibold">{project}</p>
+                  <p className="text-xs text-slate-400">Updated 2h ago</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "analytics-dashboard",
@@ -382,13 +982,40 @@ const templateSections: TemplateSection[] = [
         tags: ["Dashboard", "Analytics"],
         code: `export function AnalyticsDashboardCharts() {
   return (
-    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Analytics Dashboard</h3>
-      <p className="text-sm text-slate-300">Charts and KPI summaries.</p>
+    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Analytics Dashboard</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {["Signups", "Activation", "Retention"].map(metric => (
+          <div key={metric} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{metric}</p>
+            <div className="mt-3 flex h-16 items-end gap-2">
+              {[30, 60, 45, 80].map((height, idx) => (
+                <div key={metric + "-" + idx} className="flex-1 rounded-md bg-gradient-to-t from-cyan-500/40 to-blue-500/10" style={{ height: height + "%" }} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Analytics Dashboard", "Charts and KPI overview.", "Analytics", "from-blue-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Analytics Dashboard</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {["Signups", "Activation", "Retention"].map(metric => (
+                <div key={metric} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{metric}</p>
+                  <div className="mt-3 flex h-16 items-end gap-2">
+                    {[30, 60, 45, 80].map((height, idx) => (
+                      <div key={metric + "-" + idx} className="flex-1 rounded-md bg-gradient-to-t from-cyan-500/40 to-blue-500/10" style={{ height: height + "%" }} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "saas-metrics-ui",
@@ -398,13 +1025,32 @@ const templateSections: TemplateSection[] = [
         tags: ["Dashboard", "Metrics"],
         code: `export function SaaSMetricsUI() {
   return (
-    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">SaaS Metrics</h3>
-      <p className="text-sm text-slate-300">MRR, users, churn, and growth.</p>
+    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">SaaS Metrics</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-4">
+        {[{ label: "MRR", value: "$58.3k" }, { label: "Active users", value: "18,402" }, { label: "Churn", value: "1.9%" }, { label: "ARPA", value: "$32" }].map(stat => (
+          <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("SaaS Metrics", "MRR, users, and growth panels.", "Metrics", "from-blue-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">SaaS Metrics</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-4">
+              {[{ label: "MRR", value: "$58.3k" }, { label: "Active users", value: "18,402" }, { label: "Churn", value: "1.9%" }, { label: "ARPA", value: "$32" }].map(stat => (
+                <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "sidebar-navbar",
@@ -414,13 +1060,56 @@ const templateSections: TemplateSection[] = [
         tags: ["Dashboard", "Layout"],
         code: `export function SidebarNavbarLayout() {
   return (
-    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Sidebar + Navbar</h3>
-      <p className="text-sm text-slate-300">Navigation layout for SaaS apps.</p>
+    <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex gap-4">
+        <aside className="hidden w-40 flex-col gap-2 rounded-xl border border-slate-800 bg-slate-900 p-4 md:flex">
+          {["Overview", "Templates", "Billing", "Settings"].map(item => (
+            <button key={item} className="text-left text-sm text-slate-200" type="button">{item}</button>
+          ))}
+        </aside>
+        <div className="flex-1 space-y-3">
+          <div className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+            <p className="text-sm font-semibold">Workspace</p>
+            <button className="btn-secondary" type="button">Invite</button>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {["Active projects", "Upcoming invoices"].map(card => (
+              <div key={card} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-sm font-semibold">{card}</p>
+                <p className="text-xs text-slate-400">Updated just now</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Sidebar + Navbar", "Navigation layout for dashboards.", "Layout", "from-blue-500/30 via-cyan-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-blue-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex gap-4">
+              <aside className="hidden w-40 flex-col gap-2 rounded-xl border border-slate-800 bg-slate-900 p-4 md:flex">
+                {["Overview", "Templates", "Billing", "Settings"].map(item => (
+                  <button key={item} className="text-left text-sm text-slate-200" type="button">{item}</button>
+                ))}
+              </aside>
+              <div className="flex-1 space-y-3">
+                <div className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+                  <p className="text-sm font-semibold">Workspace</p>
+                  <button className="btn-secondary" type="button">Invite</button>
+                </div>
+                <div className="grid gap-3 md:grid-cols-2">
+                  {["Active projects", "Upcoming invoices"].map(card => (
+                    <div key={card} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                      <p className="text-sm font-semibold">{card}</p>
+                      <p className="text-xs text-slate-400">Updated just now</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -438,13 +1127,50 @@ const templateSections: TemplateSection[] = [
         tags: ["Users", "Profile"],
         code: `export function UserProfileSystem() {
   return (
-    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">User Profile</h3>
-      <p className="text-sm text-slate-300">Personal info and preferences.</p>
+    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center gap-4">
+        <div className="h-14 w-14 rounded-full bg-gradient-to-br from-rose-400 to-pink-500" />
+        <div>
+          <h3 className="text-xl font-semibold">Jamie Patel</h3>
+          <p className="text-sm text-slate-300">Product lead • jamie@studio.co</p>
+        </div>
+        <button className="btn-secondary ml-auto" type="button">Edit profile</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Role</p>
+          <p className="mt-2 text-sm font-semibold">Admin</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Workspace</p>
+          <p className="mt-2 text-sm font-semibold">Arc Studio</p>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("User Profile", "Profile details and preferences.", "Users", "from-rose-500/30 via-pink-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center gap-4">
+              <div className="h-14 w-14 rounded-full bg-gradient-to-br from-rose-400 to-pink-500" />
+              <div>
+                <h3 className="text-xl font-semibold">Jamie Patel</h3>
+                <p className="text-sm text-slate-300">Product lead • jamie@studio.co</p>
+              </div>
+              <button className="btn-secondary ml-auto" type="button">Edit profile</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Role</p>
+                <p className="mt-2 text-sm font-semibold">Admin</p>
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Workspace</p>
+                <p className="mt-2 text-sm font-semibold">Arc Studio</p>
+              </div>
+            </div>
+          </div>
+        )
       },
       {
         id: "rbac",
@@ -454,13 +1180,68 @@ const templateSections: TemplateSection[] = [
         tags: ["Users", "RBAC"],
         code: `export function RoleBasedAccessControl() {
   return (
-    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Role-Based Access Control</h3>
-      <p className="text-sm text-slate-300">Define roles and permission scopes.</p>
+    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Role-based access</h3>
+        <button className="btn-secondary" type="button">Add role</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {["Admin", "Editor", "Viewer"].map(role => (
+          <div key={role} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-sm font-semibold">{role}</p>
+            <p className="text-xs text-slate-400">{role === "Viewer" ? "Read-only" : "Can edit"}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+        <p className="font-semibold">Key permissions</p>
+        <ul className="mt-2 space-y-2 text-slate-300">
+          {[
+            "Manage billing",
+            "Invite teammates",
+            "Publish templates"
+          ].map(permission => (
+            <li key={permission} className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
+              {permission}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("RBAC", "Roles and permissions mapping.", "Users", "from-rose-500/30 via-pink-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Role-based access</h3>
+              <button className="btn-secondary" type="button">Add role</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {["Admin", "Editor", "Viewer"].map(role => (
+                <div key={role} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-sm font-semibold">{role}</p>
+                  <p className="text-xs text-slate-400">{role === "Viewer" ? "Read-only" : "Can edit"}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+              <p className="font-semibold">Key permissions</p>
+              <ul className="mt-2 space-y-2 text-slate-300">
+                {[
+                  "Manage billing",
+                  "Invite teammates",
+                  "Publish templates"
+                ].map(permission => (
+                  <li key={permission} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
+                    {permission}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )
       },
       {
         id: "user-permissions",
@@ -470,13 +1251,42 @@ const templateSections: TemplateSection[] = [
         tags: ["Users", "Permissions"],
         code: `export function UserPermissionsSystem() {
   return (
-    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">User Permissions</h3>
-      <p className="text-sm text-slate-300">Toggle granular access by feature.</p>
+    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Permissions</h3>
+      <p className="mt-1 text-sm text-slate-300">Enable or revoke feature access.</p>
+      <div className="mt-4 space-y-3 text-sm">
+        {[
+          { name: "Edit billing", enabled: true },
+          { name: "Manage users", enabled: false },
+          { name: "Publish templates", enabled: true }
+        ].map(permission => (
+          <label key={permission.name} className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+            <span>{permission.name}</span>
+            <input className="h-4 w-4 accent-rose-400" defaultChecked={permission.enabled} type="checkbox" />
+          </label>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("User Permissions", "Granular access controls.", "Users", "from-rose-500/30 via-pink-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Permissions</h3>
+            <p className="mt-1 text-sm text-slate-300">Enable or revoke feature access.</p>
+            <div className="mt-4 space-y-3 text-sm">
+              {[
+                { name: "Edit billing", enabled: true },
+                { name: "Manage users", enabled: false },
+                { name: "Publish templates", enabled: true }
+              ].map(permission => (
+                <label key={permission.name} className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+                  <span>{permission.name}</span>
+                  <input className="h-4 w-4 accent-rose-400" defaultChecked={permission.enabled} type="checkbox" />
+                </label>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "account-settings",
@@ -486,13 +1296,58 @@ const templateSections: TemplateSection[] = [
         tags: ["Users", "Settings"],
         code: `export function AccountSettingsPage() {
   return (
-    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Account Settings</h3>
-      <p className="text-sm text-slate-300">Update profile, password, and preferences.</p>
+    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Account settings</h3>
+      <div className="mt-4 grid gap-3">
+        <label className="text-sm text-slate-200">
+          Full name
+          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="Jamie Patel" />
+        </label>
+        <label className="text-sm text-slate-200">
+          Email
+          <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="jamie@studio.co" type="email" />
+        </label>
+        <label className="text-sm text-slate-200">
+          Timezone
+          <select className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <option>GMT-8 (Pacific)</option>
+            <option>GMT-5 (Eastern)</option>
+          </select>
+        </label>
+      </div>
+      <div className="mt-4 flex gap-3">
+        <button className="btn-secondary" type="button">Cancel</button>
+        <button className="btn-primary" type="button">Save changes</button>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Account Settings", "Settings and security controls.", "Users", "from-rose-500/30 via-pink-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Account settings</h3>
+            <div className="mt-4 grid gap-3">
+              <label className="text-sm text-slate-200">
+                Full name
+                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="Jamie Patel" />
+              </label>
+              <label className="text-sm text-slate-200">
+                Email
+                <input className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2" placeholder="jamie@studio.co" type="email" />
+              </label>
+              <label className="text-sm text-slate-200">
+                Timezone
+                <select className="mt-2 w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <option>GMT-8 (Pacific)</option>
+                  <option>GMT-5 (Eastern)</option>
+                </select>
+              </label>
+            </div>
+            <div className="mt-4 flex gap-3">
+              <button className="btn-secondary" type="button">Cancel</button>
+              <button className="btn-primary" type="button">Save changes</button>
+            </div>
+          </div>
+        )
       },
       {
         id: "delete-account",
@@ -502,13 +1357,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Users", "Security"],
         code: `export function DeleteAccountFlow() {
   return (
-    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Delete Account</h3>
-      <p className="text-sm text-slate-300">Confirm deletion with safety checks.</p>
+    <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Delete account</h3>
+      <p className="mt-1 text-sm text-slate-300">This action is permanent and cannot be undone.</p>
+      <div className="mt-4 rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm">
+        <p className="font-semibold text-rose-200">Before you go</p>
+        <ul className="mt-2 space-y-2 text-slate-200">
+          {["Download your data", "Transfer billing", "Revoke tokens"].map(item => (
+            <li key={item} className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <button className="mt-4 w-full rounded-lg border border-rose-500/40 bg-rose-500/10 px-4 py-2 text-sm text-rose-100" type="button">
+        Delete account permanently
+      </button>
     </div>
   );
 }`,
-        preview: createPreview("Delete Account", "Deletion flow with confirmations.", "Users", "from-rose-500/30 via-pink-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-rose-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Delete account</h3>
+            <p className="mt-1 text-sm text-slate-300">This action is permanent and cannot be undone.</p>
+            <div className="mt-4 rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm">
+              <p className="font-semibold text-rose-200">Before you go</p>
+              <ul className="mt-2 space-y-2 text-slate-200">
+                {["Download your data", "Transfer billing", "Revoke tokens"].map(item => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button className="mt-4 w-full rounded-lg border border-rose-500/40 bg-rose-500/10 px-4 py-2 text-sm text-rose-100" type="button">
+              Delete account permanently
+            </button>
+          </div>
+        )
       }
     ]
   },
@@ -526,13 +1414,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Email", "Welcome"],
         code: `export function WelcomeEmailSystem() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Welcome Email</h3>
-      <p className="text-sm text-slate-300">Intro copy with onboarding links.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Welcome</p>
+      <h3 className="mt-2 text-2xl font-semibold">You are in! Let us get you started.</h3>
+      <p className="mt-1 text-sm text-slate-300">Pick a template and launch in minutes.</p>
+      <div className="mt-4 grid gap-2 text-sm">
+        {[
+          "Browse templates",
+          "Invite your team",
+          "Connect billing"
+        ].map(item => (
+          <div key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{item}</span>
+            <span className="text-amber-200">→</span>
+          </div>
+        ))}
+      </div>
+      <button className="btn-primary mt-4" type="button">Open dashboard</button>
     </div>
   );
 }`,
-        preview: createPreview("Welcome Email", "Welcome email with quick start links.", "Email", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Welcome</p>
+            <h3 className="mt-2 text-2xl font-semibold">You are in! Let us get you started.</h3>
+            <p className="mt-1 text-sm text-slate-300">Pick a template and launch in minutes.</p>
+            <div className="mt-4 grid gap-2 text-sm">
+              {[
+                "Browse templates",
+                "Invite your team",
+                "Connect billing"
+              ].map(item => (
+                <div key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{item}</span>
+                  <span className="text-amber-200">→</span>
+                </div>
+              ))}
+            </div>
+            <button className="btn-primary mt-4" type="button">Open dashboard</button>
+          </div>
+        )
       },
       {
         id: "password-reset-email",
@@ -542,13 +1463,28 @@ const templateSections: TemplateSection[] = [
         tags: ["Email", "Reset"],
         code: `export function PasswordResetEmailTemplate() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Password Reset Email</h3>
-      <p className="text-sm text-slate-300">CTA to reset the account password.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-2xl font-semibold">Reset your password</h3>
+      <p className="mt-1 text-sm text-slate-300">We received a request to reset your password.</p>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+        <p className="text-slate-200">This link expires in 15 minutes.</p>
+        <button className="btn-primary mt-3" type="button">Reset password</button>
+      </div>
+      <p className="mt-3 text-xs text-slate-400">If you did not request this, ignore this email.</p>
     </div>
   );
 }`,
-        preview: createPreview("Password Reset Email", "Reset email with CTA.", "Email", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-2xl font-semibold">Reset your password</h3>
+            <p className="mt-1 text-sm text-slate-300">We received a request to reset your password.</p>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm">
+              <p className="text-slate-200">This link expires in 15 minutes.</p>
+              <button className="btn-primary mt-3" type="button">Reset password</button>
+            </div>
+            <p className="mt-3 text-xs text-slate-400">If you did not request this, ignore this email.</p>
+          </div>
+        )
       },
       {
         id: "in-app-notifications",
@@ -558,13 +1494,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Notifications", "In-app"],
         code: `export function InAppNotificationSystem() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">In-App Notifications</h3>
-      <p className="text-sm text-slate-300">Notification list with read states.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Notifications</h3>
+        <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">3 new</span>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          "New teammate joined your workspace",
+          "Subscription updated to Growth",
+          "Template export completed"
+        ].map(item => (
+          <div key={item} className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <p>{item}</p>
+            <p className="text-xs text-slate-400">Just now</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("In-App Notifications", "Notification center with badges.", "Notify", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Notifications</h3>
+              <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-100">3 new</span>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                "New teammate joined your workspace",
+                "Subscription updated to Growth",
+                "Template export completed"
+              ].map(item => (
+                <div key={item} className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <p>{item}</p>
+                  <p className="text-xs text-slate-400">Just now</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "html-email-templates",
@@ -574,13 +1543,44 @@ const templateSections: TemplateSection[] = [
         tags: ["Email", "HTML"],
         code: `export function HTMLEmailTemplates() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">HTML Email Templates</h3>
-      <p className="text-sm text-slate-300">Branded HTML layouts and sections.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">HTML Email Builder</h3>
+      <div className="mt-4 space-y-3">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Header</p>
+          <p className="mt-2 text-sm font-semibold">Your weekly product updates</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Content block</p>
+          <p className="mt-2 text-sm text-slate-300">New templates, billing revamp, and analytics dashboards.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">CTA</p>
+          <button className="btn-primary mt-2" type="button">Read updates</button>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("HTML Email Templates", "Branded HTML email layouts.", "Email", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">HTML Email Builder</h3>
+            <div className="mt-4 space-y-3">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Header</p>
+                <p className="mt-2 text-sm font-semibold">Your weekly product updates</p>
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Content block</p>
+                <p className="mt-2 text-sm text-slate-300">New templates, billing revamp, and analytics dashboards.</p>
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">CTA</p>
+                <button className="btn-primary mt-2" type="button">Read updates</button>
+              </div>
+            </div>
+          </div>
+        )
       },
       {
         id: "smtp-integration",
@@ -590,13 +1590,44 @@ const templateSections: TemplateSection[] = [
         tags: ["Email", "SMTP"],
         code: `export function SMTPEmailIntegration() {
   return (
-    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">SMTP Integration</h3>
-      <p className="text-sm text-slate-300">Connect SMTP and send transactional mail.</p>
+    <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">SMTP Integration</h3>
+        <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        <div className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+          <span>Provider</span>
+          <span className="text-slate-200">Postmark</span>
+        </div>
+        <div className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+          <span>From address</span>
+          <span className="text-slate-200">hello@templates.app</span>
+        </div>
+      </div>
+      <button className="btn-secondary mt-4" type="button">Send test email</button>
     </div>
   );
 }`,
-        preview: createPreview("SMTP Integration", "SMTP setup and sending pipeline.", "Email", "from-amber-500/30 via-orange-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-amber-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">SMTP Integration</h3>
+              <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              <div className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                <span>Provider</span>
+                <span className="text-slate-200">Postmark</span>
+              </div>
+              <div className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                <span>From address</span>
+                <span className="text-slate-200">hello@templates.app</span>
+              </div>
+            </div>
+            <button className="btn-secondary mt-4" type="button">Send test email</button>
+          </div>
+        )
       }
     ]
   },
@@ -614,13 +1645,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Files", "Upload"],
         code: `export function FileUploadSystem() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">File Upload</h3>
-      <p className="text-sm text-slate-300">Drag-and-drop uploads with progress.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Upload files</h3>
+      <div className="mt-4 rounded-xl border border-dashed border-emerald-500/40 bg-emerald-500/5 p-6 text-center text-sm text-emerald-100">
+        Drag files here or click to upload
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {["design-system.zip", "dashboard.png"].map(file => (
+          <div key={file} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{file}</span>
+            <span className="text-xs text-slate-400">Uploading…</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("File Upload", "Drag-and-drop uploads with progress.", "Files", "from-emerald-500/30 via-teal-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Upload files</h3>
+            <div className="mt-4 rounded-xl border border-dashed border-emerald-500/40 bg-emerald-500/5 p-6 text-center text-sm text-emerald-100">
+              Drag files here or click to upload
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {["design-system.zip", "dashboard.png"].map(file => (
+                <div key={file} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{file}</span>
+                  <span className="text-xs text-slate-400">Uploading…</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "image-upload-preview",
@@ -630,13 +1686,32 @@ const templateSections: TemplateSection[] = [
         tags: ["Files", "Images"],
         code: `export function ImageUploadWithPreview() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Image Upload Preview</h3>
-      <p className="text-sm text-slate-300">Preview and crop before upload.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Image preview</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="aspect-square rounded-xl border border-slate-800 bg-slate-900" />
+        <div className="space-y-3">
+          <div className="rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm">Crop: 1:1</div>
+          <button className="btn-secondary w-full" type="button">Choose image</button>
+          <button className="btn-primary w-full" type="button">Save avatar</button>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Image Upload Preview", "Preview and crop images.", "Images", "from-emerald-500/30 via-teal-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Image preview</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="aspect-square rounded-xl border border-slate-800 bg-slate-900" />
+              <div className="space-y-3">
+                <div className="rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm">Crop: 1:1</div>
+                <button className="btn-secondary w-full" type="button">Choose image</button>
+                <button className="btn-primary w-full" type="button">Save avatar</button>
+              </div>
+            </div>
+          </div>
+        )
       },
       {
         id: "cloud-storage",
@@ -646,13 +1721,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Files", "S3"],
         code: `export function CloudStorageIntegration() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Cloud Storage (S3)</h3>
-      <p className="text-sm text-slate-300">Presigned uploads and CDN delivery.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">AWS S3 Storage</h3>
+        <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {["uploads/assets", "uploads/avatars", "exports/reports"].map(bucket => (
+          <div key={bucket} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{bucket}</span>
+            <button className="text-xs text-emerald-200" type="button">View</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Cloud Storage (AWS S3)", "S3 uploads with presigned URLs.", "Storage", "from-emerald-500/30 via-teal-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">AWS S3 Storage</h3>
+              <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-100">Connected</span>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {["uploads/assets", "uploads/avatars", "exports/reports"].map(bucket => (
+                <div key={bucket} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{bucket}</span>
+                  <button className="text-xs text-emerald-200" type="button">View</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "profile-picture",
@@ -662,13 +1762,30 @@ const templateSections: TemplateSection[] = [
         tags: ["Files", "Avatar"],
         code: `export function ProfilePictureUpload() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Profile Picture Upload</h3>
-      <p className="text-sm text-slate-300">Upload, crop, and save avatars.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Profile photo</h3>
+      <div className="mt-4 flex items-center gap-4">
+        <div className="h-16 w-16 rounded-full bg-slate-800" />
+        <div className="space-y-2">
+          <button className="btn-secondary" type="button">Upload new</button>
+          <button className="text-xs text-slate-400" type="button">Remove photo</button>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Profile Picture Upload", "Avatar upload and crop flow.", "Profile", "from-emerald-500/30 via-teal-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Profile photo</h3>
+            <div className="mt-4 flex items-center gap-4">
+              <div className="h-16 w-16 rounded-full bg-slate-800" />
+              <div className="space-y-2">
+                <button className="btn-secondary" type="button">Upload new</button>
+                <button className="text-xs text-slate-400" type="button">Remove photo</button>
+              </div>
+            </div>
+          </div>
+        )
       },
       {
         id: "document-management",
@@ -678,13 +1795,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Files", "Docs"],
         code: `export function DocumentManagementSystem() {
   return (
-    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Document Management</h3>
-      <p className="text-sm text-slate-300">Tag and search stored documents.</p>
+    <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Documents</h3>
+        <button className="btn-secondary" type="button">New folder</button>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          { name: "Brand guidelines.pdf", tag: "Design" },
+          { name: "Pricing sheet.xlsx", tag: "Finance" },
+          { name: "Q1 roadmap.docx", tag: "Product" }
+        ].map(doc => (
+          <div key={doc.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{doc.name}</span>
+            <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{doc.tag}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Document Management", "Organize and search documents.", "Docs", "from-emerald-500/30 via-teal-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-emerald-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Documents</h3>
+              <button className="btn-secondary" type="button">New folder</button>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                { name: "Brand guidelines.pdf", tag: "Design" },
+                { name: "Pricing sheet.xlsx", tag: "Finance" },
+                { name: "Q1 roadmap.docx", tag: "Product" }
+              ].map(doc => (
+                <div key={doc.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{doc.name}</span>
+                  <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{doc.tag}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -702,13 +1852,40 @@ const templateSections: TemplateSection[] = [
         tags: ["Analytics", "Users"],
         code: `export function UserActivityTracking() {
   return (
-    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">User Activity</h3>
-      <p className="text-sm text-slate-300">Session and event tracking panels.</p>
+    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">User activity</h3>
+      <div className="mt-4 space-y-3 text-sm">
+        {[
+          { user: "@jamie", action: "Logged in", time: "2m ago" },
+          { user: "@riley", action: "Upgraded plan", time: "12m ago" },
+          { user: "@noah", action: "Invited teammate", time: "1h ago" }
+        ].map(item => (
+          <div key={item.user + item.time} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{item.user} • {item.action}</span>
+            <span className="text-xs text-slate-400">{item.time}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("User Activity Tracking", "Session and event tracking.", "Analytics", "from-sky-500/30 via-blue-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">User activity</h3>
+            <div className="mt-4 space-y-3 text-sm">
+              {[
+                { user: "@jamie", action: "Logged in", time: "2m ago" },
+                { user: "@riley", action: "Upgraded plan", time: "12m ago" },
+                { user: "@noah", action: "Invited teammate", time: "1h ago" }
+              ].map(item => (
+                <div key={item.user + item.time} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{item.user} • {item.action}</span>
+                  <span className="text-xs text-slate-400">{item.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "page-view-analytics",
@@ -718,13 +1895,32 @@ const templateSections: TemplateSection[] = [
         tags: ["Analytics", "Pages"],
         code: `export function PageViewAnalytics() {
   return (
-    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Page Views</h3>
-      <p className="text-sm text-slate-300">Track page visits and trends.</p>
+    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Page views</h3>
+        <span className="text-xs text-slate-400">Last 7 days</span>
+      </div>
+      <div className="mt-4 flex h-20 items-end gap-2">
+        {[25, 40, 32, 55, 48, 70, 60].map((height, idx) => (
+          <div key={idx} className="flex-1 rounded-md bg-gradient-to-t from-sky-500/40 to-blue-500/10" style={{ height: height + "%" }} />
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Page View Analytics", "Track page views and trends.", "Analytics", "from-sky-500/30 via-blue-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Page views</h3>
+              <span className="text-xs text-slate-400">Last 7 days</span>
+            </div>
+            <div className="mt-4 flex h-20 items-end gap-2">
+              {[25, 40, 32, 55, 48, 70, 60].map((height, idx) => (
+                <div key={idx} className="flex-1 rounded-md bg-gradient-to-t from-sky-500/40 to-blue-500/10" style={{ height: height + "%" }} />
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "admin-analytics",
@@ -734,13 +1930,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Analytics", "Admin"],
         code: `export function AdminAnalyticsDashboard() {
   return (
-    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Admin Analytics</h3>
-      <p className="text-sm text-slate-300">Global metrics and system health.</p>
+    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Admin analytics</h3>
+        <button className="btn-secondary" type="button">Export</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ label: "Active orgs", value: "1,204" }, { label: "MRR", value: "$82.1k" }, { label: "Uptime", value: "99.98%" }].map(stat => (
+          <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Admin Analytics", "Admin metrics overview.", "Analytics", "from-sky-500/30 via-blue-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Admin analytics</h3>
+              <button className="btn-secondary" type="button">Export</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ label: "Active orgs", value: "1,204" }, { label: "MRR", value: "$82.1k" }, { label: "Uptime", value: "99.98%" }].map(stat => (
+                <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "event-tracking",
@@ -750,13 +1971,40 @@ const templateSections: TemplateSection[] = [
         tags: ["Analytics", "Events"],
         code: `export function EventTrackingSystem() {
   return (
-    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Event Tracking</h3>
-      <p className="text-sm text-slate-300">Capture events and filter by source.</p>
+    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Event tracking</h3>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          { name: "user_signed_up", source: "web" },
+          { name: "subscription_upgraded", source: "billing" },
+          { name: "template_published", source: "api" }
+        ].map(evt => (
+          <div key={evt.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span className="font-mono text-xs text-slate-200">{evt.name}</span>
+            <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{evt.source}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Event Tracking", "Capture events and filter sources.", "Analytics", "from-sky-500/30 via-blue-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Event tracking</h3>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                { name: "user_signed_up", source: "web" },
+                { name: "subscription_upgraded", source: "billing" },
+                { name: "template_published", source: "api" }
+              ].map(evt => (
+                <div key={evt.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span className="font-mono text-xs text-slate-200">{evt.name}</span>
+                  <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{evt.source}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "custom-charts",
@@ -766,13 +2014,36 @@ const templateSections: TemplateSection[] = [
         tags: ["Analytics", "Charts"],
         code: `export function CustomChartIntegration() {
   return (
-    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Custom Charts</h3>
-      <p className="text-sm text-slate-300">Embed charts and analytics widgets.</p>
+    <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Custom charts</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">MRR growth</p>
+          <div className="mt-3 h-20 rounded-lg bg-gradient-to-r from-sky-500/25 to-blue-500/10" />
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Retention</p>
+          <div className="mt-3 h-20 rounded-lg bg-gradient-to-r from-blue-500/25 to-cyan-500/10" />
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Custom Charts", "Embed charts and analytics widgets.", "Charts", "from-sky-500/30 via-blue-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-sky-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Custom charts</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">MRR growth</p>
+                <div className="mt-3 h-20 rounded-lg bg-gradient-to-r from-sky-500/25 to-blue-500/10" />
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Retention</p>
+                <div className="mt-3 h-20 rounded-lg bg-gradient-to-r from-blue-500/25 to-cyan-500/10" />
+              </div>
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -790,13 +2061,38 @@ const templateSections: TemplateSection[] = [
         tags: ["Admin", "Dashboard"],
         code: `export function AdminDashboardPanel() {
   return (
-    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Admin Panel</h3>
-      <p className="text-sm text-slate-300">Overview controls and insights.</p>
+    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Admin overview</h3>
+        <button className="btn-secondary" type="button">Generate report</button>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ label: "Active users", value: "12,402" }, { label: "MRR", value: "$94.2k" }, { label: "Tickets", value: "28" }].map(stat => (
+          <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Admin Panel", "Overview controls and insights.", "Admin", "from-fuchsia-500/30 via-rose-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Admin overview</h3>
+              <button className="btn-secondary" type="button">Generate report</button>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ label: "Active users", value: "12,402" }, { label: "MRR", value: "$94.2k" }, { label: "Tickets", value: "28" }].map(stat => (
+                <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "user-management-admin",
@@ -806,13 +2102,46 @@ const templateSections: TemplateSection[] = [
         tags: ["Admin", "Users"],
         code: `export function UserManagementAdminView() {
   return (
-    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">User Management</h3>
-      <p className="text-sm text-slate-300">Search users and manage roles.</p>
+    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">User management</h3>
+        <button className="btn-secondary" type="button">Invite user</button>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          { name: "Jamie Patel", role: "Admin" },
+          { name: "Riley Chen", role: "Editor" },
+          { name: "Noah Kim", role: "Viewer" }
+        ].map(user => (
+          <div key={user.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{user.name}</span>
+            <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{user.role}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("User Management Admin", "Manage users and roles.", "Admin", "from-fuchsia-500/30 via-rose-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">User management</h3>
+              <button className="btn-secondary" type="button">Invite user</button>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                { name: "Jamie Patel", role: "Admin" },
+                { name: "Riley Chen", role: "Editor" },
+                { name: "Noah Kim", role: "Viewer" }
+              ].map(user => (
+                <div key={user.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{user.name}</span>
+                  <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{user.role}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "content-moderation",
@@ -822,13 +2151,40 @@ const templateSections: TemplateSection[] = [
         tags: ["Admin", "Moderation"],
         code: `export function ContentModerationSystem() {
   return (
-    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Content Moderation</h3>
-      <p className="text-sm text-slate-300">Queue and review flagged content.</p>
+    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Moderation queue</h3>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          "Flagged template: Pricing v2",
+          "Reported comment on template",
+          "User reported spam"
+        ].map(item => (
+          <div key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{item}</span>
+            <button className="text-xs text-fuchsia-200" type="button">Review</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Content Moderation", "Review and moderate content.", "Admin", "from-fuchsia-500/30 via-rose-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Moderation queue</h3>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                "Flagged template: Pricing v2",
+                "Reported comment on template",
+                "User reported spam"
+              ].map(item => (
+                <div key={item} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{item}</span>
+                  <button className="text-xs text-fuchsia-200" type="button">Review</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "analytics-overview-panel",
@@ -838,13 +2194,36 @@ const templateSections: TemplateSection[] = [
         tags: ["Admin", "Analytics"],
         code: `export function AnalyticsOverviewPanel() {
   return (
-    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Analytics Overview</h3>
-      <p className="text-sm text-slate-300">Summary of KPIs and growth.</p>
+    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Analytics overview</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Weekly signups</p>
+          <p className="mt-2 text-2xl font-semibold">2,104</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p className="text-xs text-slate-400">Activation rate</p>
+          <p className="mt-2 text-2xl font-semibold">38%</p>
+        </div>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Analytics Overview", "Summary of KPIs and growth.", "Admin", "from-fuchsia-500/30 via-rose-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Analytics overview</h3>
+            <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Weekly signups</p>
+                <p className="mt-2 text-2xl font-semibold">2,104</p>
+              </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <p className="text-xs text-slate-400">Activation rate</p>
+                <p className="mt-2 text-2xl font-semibold">38%</p>
+              </div>
+            </div>
+          </div>
+        )
       },
       {
         id: "system-settings",
@@ -854,13 +2233,40 @@ const templateSections: TemplateSection[] = [
         tags: ["Admin", "Settings"],
         code: `export function SystemSettingsPanel() {
   return (
-    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">System Settings</h3>
-      <p className="text-sm text-slate-300">Global settings and feature toggles.</p>
+    <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">System settings</h3>
+      <div className="mt-4 space-y-3 text-sm">
+        {[
+          "Enable audit logs",
+          "Require MFA",
+          "Maintenance mode"
+        ].map(setting => (
+          <label key={setting} className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+            <span>{setting}</span>
+            <input className="h-4 w-4 accent-fuchsia-400" type="checkbox" />
+          </label>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("System Settings", "Global settings and toggles.", "Admin", "from-fuchsia-500/30 via-rose-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-fuchsia-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">System settings</h3>
+            <div className="mt-4 space-y-3 text-sm">
+              {[
+                "Enable audit logs",
+                "Require MFA",
+                "Maintenance mode"
+              ].map(setting => (
+                <label key={setting} className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900 px-4 py-3">
+                  <span>{setting}</span>
+                  <input className="h-4 w-4 accent-fuchsia-400" type="checkbox" />
+                </label>
+              ))}
+            </div>
+          </div>
+        )
       }
     ]
   },
@@ -878,13 +2284,32 @@ const templateSections: TemplateSection[] = [
         tags: ["AI", "Chat"],
         code: `export function AIChatInterface() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">AI Chat Interface</h3>
-      <p className="text-sm text-slate-300">Conversation layout and message stream.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">AI Assistant</h3>
+      <div className="mt-4 space-y-3 text-sm">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">How can I help you today?</div>
+        <div className="ml-auto rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-3">Show me billing templates.</div>
+      </div>
+      <div className="mt-4 flex gap-2">
+        <input className="flex-1 rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="Ask a question" />
+        <button className="btn-primary" type="button">Send</button>
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("AI Chat Interface", "Chat UI for AI assistants.", "AI", "from-indigo-500/30 via-violet-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">AI Assistant</h3>
+            <div className="mt-4 space-y-3 text-sm">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">How can I help you today?</div>
+              <div className="ml-auto rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-3">Show me billing templates.</div>
+            </div>
+            <div className="mt-4 flex gap-2">
+              <input className="flex-1 rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-sm" placeholder="Ask a question" />
+              <button className="btn-primary" type="button">Send</button>
+            </div>
+          </div>
+        )
       },
       {
         id: "openai-integration",
@@ -894,13 +2319,26 @@ const templateSections: TemplateSection[] = [
         tags: ["AI", "API"],
         code: `export function OpenAIAPIIntegrationModule() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">OpenAI Integration</h3>
-      <p className="text-sm text-slate-300">Prompt requests and response handling.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">OpenAI Integration</h3>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-xs">
+        <p className="text-slate-400">POST /v1/chat/completions</p>
+        <pre className="mt-2 whitespace-pre-wrap text-slate-200">{"{"}model: \"gpt-4o-mini\", messages: [{ role: \"user\", content: \"Summarize my app\" }]{"}"}</pre>
+      </div>
+      <button className="btn-secondary mt-4" type="button">Test request</button>
     </div>
   );
 }`,
-        preview: createPreview("OpenAI Integration", "API integration module.", "AI", "from-indigo-500/30 via-violet-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">OpenAI Integration</h3>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-4 text-xs">
+              <p className="text-slate-400">POST /v1/chat/completions</p>
+              <pre className="mt-2 whitespace-pre-wrap text-slate-200">{`{model: "gpt-4o-mini", messages: [{ role: "user", content: "Summarize my app" }]}`}</pre>
+            </div>
+            <button className="btn-secondary mt-4" type="button">Test request</button>
+          </div>
+        )
       },
       {
         id: "ai-content-generator",
@@ -910,13 +2348,22 @@ const templateSections: TemplateSection[] = [
         tags: ["AI", "Content"],
         code: `export function AIContentGeneratorUI() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">AI Content Generator</h3>
-      <p className="text-sm text-slate-300">Prompt input and generated output.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <h3 className="text-xl font-semibold">Content generator</h3>
+      <textarea className="mt-4 w-full rounded-lg border border-slate-800 bg-slate-900 p-3 text-sm" rows={3} placeholder="Write a welcome email for a SaaS app..." />
+      <button className="btn-primary mt-3" type="button">Generate</button>
+      <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm text-slate-200">Draft output will appear here.</div>
     </div>
   );
 }`,
-        preview: createPreview("AI Content Generator", "Prompt to content UI.", "AI", "from-indigo-500/30 via-violet-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <h3 className="text-xl font-semibold">Content generator</h3>
+            <textarea className="mt-4 w-full rounded-lg border border-slate-800 bg-slate-900 p-3 text-sm" rows={3} placeholder="Write a welcome email for a SaaS app..." />
+            <button className="btn-primary mt-3" type="button">Generate</button>
+            <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm text-slate-200">Draft output will appear here.</div>
+          </div>
+        )
       },
       {
         id: "prompt-management",
@@ -926,13 +2373,46 @@ const templateSections: TemplateSection[] = [
         tags: ["AI", "Prompts"],
         code: `export function PromptManagementSystem() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">Prompt Management</h3>
-      <p className="text-sm text-slate-300">Save, tag, and reuse prompts.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">Prompt library</h3>
+        <button className="btn-secondary" type="button">New prompt</button>
+      </div>
+      <div className="mt-4 space-y-2 text-sm">
+        {[
+          { name: "Onboarding email", tag: "Marketing" },
+          { name: "Changelog summary", tag: "Product" },
+          { name: "Support reply", tag: "Support" }
+        ].map(prompt => (
+          <div key={prompt.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+            <span>{prompt.name}</span>
+            <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{prompt.tag}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("Prompt Management", "Store and organize prompts.", "AI", "from-indigo-500/30 via-violet-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">Prompt library</h3>
+              <button className="btn-secondary" type="button">New prompt</button>
+            </div>
+            <div className="mt-4 space-y-2 text-sm">
+              {[
+                { name: "Onboarding email", tag: "Marketing" },
+                { name: "Changelog summary", tag: "Product" },
+                { name: "Support reply", tag: "Support" }
+              ].map(prompt => (
+                <div key={prompt.name} className="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-3 py-2">
+                  <span>{prompt.name}</span>
+                  <span className="rounded-full bg-white/10 px-2 py-1 text-xs text-slate-200">{prompt.tag}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       },
       {
         id: "ai-dashboard",
@@ -942,13 +2422,38 @@ const templateSections: TemplateSection[] = [
         tags: ["AI", "Dashboard"],
         code: `export function AIDashboardInterface() {
   return (
-    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-5 text-white">
-      <h3 className="text-lg font-semibold">AI Dashboard</h3>
-      <p className="text-sm text-slate-300">Usage, costs, and performance.</p>
+    <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-semibold">AI usage</h3>
+        <span className="rounded-full bg-indigo-500/15 px-3 py-1 text-xs text-indigo-100">March</span>
+      </div>
+      <div className="mt-4 grid gap-3 md:grid-cols-3">
+        {[{ label: "Requests", value: "84k" }, { label: "Spend", value: "$412" }, { label: "Latency", value: "620ms" }].map(stat => (
+          <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+            <p className="text-xs text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }`,
-        preview: createPreview("AI Dashboard", "Monitor AI usage and costs.", "AI", "from-indigo-500/30 via-violet-500/20 to-slate-500/10")
+        preview: (
+          <div className="rounded-2xl border border-indigo-500/30 bg-slate-950 p-6 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold">AI usage</h3>
+              <span className="rounded-full bg-indigo-500/15 px-3 py-1 text-xs text-indigo-100">March</span>
+            </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              {[{ label: "Requests", value: "84k" }, { label: "Spend", value: "$412" }, { label: "Latency", value: "620ms" }].map(stat => (
+                <div key={stat.label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                  <p className="text-xs text-slate-400">{stat.label}</p>
+                  <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
       }
     ]
   }
@@ -1732,7 +3237,7 @@ Next update in 20 minutes. Thank you for your patience.`;
           </div>
         );
       default:
-        return null;
+        return template.preview ?? null;
     }
   };
 
